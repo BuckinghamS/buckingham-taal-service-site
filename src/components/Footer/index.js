@@ -14,49 +14,50 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const Footer = () => {
-  const FooterData = useStaticQuery(graphql`
-    {
-      footer: contentfulFooter {
-        logo {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-        footerMenu {
-          navLink
-          navName
-        }
-        footerDetailsLeft {
-          footerDetailsLeft
-        }
-      }
-    }
-  `)
-  const {
-    footerMenu,
-    logo,
-    footerDetailsLeft,
-  } = FooterData.footer
+  // const FooterData = useStaticQuery(graphql`
+  //   {
+  //     footer: contentfulFooter {
+  //       logo {
+  //         localFile {
+  //           childImageSharp {
+  //             gatsbyImageData
+  //           }
+  //         }
+  //       }
+  //       footerMenu {
+  //         navLink
+  //         navName
+  //       }
+  //       footerDetailsLeft {
+  //         footerDetailsLeft
+  //       }
+  //     }
+  //   }
+  // `)
+  // const {
+  //   footerMenu,
+  //   logo,
+  //   footerDetailsLeft,
+  // } = FooterData.footer
 
-  const footerImage = {
-    img: logo.localFile?.childImageSharp?.gatsbyImageData,
-    alt: 'Zuiver&Koek'
-  }
+  // const footerImage = {
+  //   img: logo.localFile?.childImageSharp?.gatsbyImageData,
+  //   alt: 'Zuiver&Koek'
+  // }
 
-  const menu =
-    footerMenu && footerMenu.length > 0
-      ? footerMenu.map((item, index) => (
-          <MenuItem key={index} to={item.navLink}>
-            <span>{parse(item.navName)}</span>
-          </MenuItem>
-        ))
-      : null
+  // const menu =
+  //   footerMenu && footerMenu.length > 0
+  //     ? footerMenu.map((item, index) => (
+  //         <MenuItem key={index} to={item.navLink}>
+  //           <span>{parse(item.navName)}</span>
+  //         </MenuItem>
+  //       ))
+  //     : null
 
   return (
     <FooterWrapper>
-      <FooterContainer>
+      Footer
+      {/* <FooterContainer>
         <Link to="/" className="footer-link">
           <GatsbyImage
             image={footerImage.img}
@@ -74,7 +75,7 @@ const Footer = () => {
       <PoweredByFooter>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/robberttuerlings">Code by Robbert Tuerlings</a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ruth-mollema-218083ba/">Design by Ruth Mollema</a>
-      </PoweredByFooter>
+      </PoweredByFooter> */}
     </FooterWrapper>
   )
 }

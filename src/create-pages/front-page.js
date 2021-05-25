@@ -6,69 +6,38 @@ const frontPageTemplate = require.resolve(`../templates/front-page/index.js`)
 // Get all the front page data.
 const GET_FRONT_PAGE = `
 query GET_FRONT_PAGE {
-  page: contentfulLandingPage(slug: {eq: "frontpage"}) {
+  page:
+  contentfulLandingPage(slug: {eq: "frontpage"}) {
+    internalName
     hero {
-      ... on ContentfulComponentHero {
-        id
-        image {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
+      childContentfulComponentHeroTextTextNode {
+        text
+      }
+      image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData
           }
         }
-        text {
-          text
-        }
-        ctaText
-        ctaLink
       }
     }
     sections {
-      ... on ContentfulComponentSection {
-        id
-        name
-        columns {
-          ... on ContentfulComponentText {
-            id
-            title
-            text {
-              text
-            }
-          }
-          ... on ContentfulComponentImage {
-            id
-            title
-            image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
+      name
+      columns {
+        ... on ContentfulComponentImage {
+          id
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
               }
             }
           }
-          ... on ContentfulComponentUsp {
-            id
-            text {
-              text
-            }
-            title
-            uspImage {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-          }
-          ... on ContentfulComponentNewsItem {
-            id
-            ctaText
-            ctaLink
-            title
-            text {
-              text
-            }
+        }
+        ... on ContentfulComponentText {
+          id
+          text {
+            text
           }
         }
       }
@@ -93,7 +62,6 @@ module.exports = async ({ actions, graphql }) => {
   await fetchPosts().then(({ page }) => {
     createPage({
       path: `/`,
-      // path: page.uri,
       component: slash(frontPageTemplate),
       context: {
         page,
@@ -101,52 +69,3 @@ module.exports = async ({ actions, graphql }) => {
     })
   })
 }
-
-// query GET_FRONT_PAGE {
-//   page: contentfulHomepage {
-//     heroHeader
-//     reasonHeader
-//     introductionHeader
-//     hero {
-//       gatsbyImageData
-//     }
-//     duurzaamBody
-//     duurzaamHeader
-//     duurzaamImage {
-//       gatsbyImageData
-//     }
-//     lowImpactBody
-//     lowImpactHeader
-//     lowImpactImage {
-//       gatsbyImageData
-//     }
-//     metLiefdeBody
-//     metLiefdeHeader
-//     metLiefdeImage {
-//       gatsbyImageData
-//     }
-//     opBestellingBody
-//     opBestellingHeader
-//     opBestellingImage {
-//       gatsbyImageData
-//     }
-//     socialHeader
-//     timEnRuthHeader
-//     transparantBody
-//     transparantHeader
-//     transparantImage {
-//       gatsbyImageData
-//     }
-//     usp1body
-//     usp1header
-//     usp2body
-//     usp2header
-//     usp3body
-//     usp3header
-//     verassingBody
-//     verassingHeader
-//     verassingImage {
-//       gatsbyImageData
-//     }
-//   }
-// }
