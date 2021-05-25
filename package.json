@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "basic-gatbsy-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Basic Gatbsy site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Robbert Tuerlings",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
@@ -19,8 +19,6 @@
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-source-contentful": "^5.1.3",
     "gatsby-source-filesystem": "^3.1.0",
-    "gatsby-source-instagram": "^0.9.0",
-    "gatsby-source-shopify": "^4.3.0",
     "gatsby-transformer-sharp": "^3.1.0",
     "html-react-parser": "^1.2.4",
     "isomorphic-fetch": "^3.0.0",
@@ -31,14 +29,11 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.3.6",
-    "react-horizontal-scrolling-menu": "^0.7.10",
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-toastify": "^7.0.3",
-    "set-value": "^3.0.2",
-    "shopify-buy": "^2.11.0"
+    "set-value": "^3.0.2"
   },
   "devDependencies": {
     "prettier": "2.2.1"
