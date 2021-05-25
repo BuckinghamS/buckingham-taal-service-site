@@ -14,81 +14,81 @@ const SingleProductPage = ({ data }) => {
   const extraDescription =
     data.desc && !isEmpty(data.desc) ? data.desc.description.text : ''
 
-  return (
-    <Layout>
-      {!isEmpty(data) ? (
-        <>
-          {/* <SEO
-              title={name}
-              seoData={seo}
-              uri={link}
-              header={{ siteTitle: 'Gatsby WooCommerce Theme' }}
-              openGraphImage={getOgImage(seo)}
-            /> */}
-          <ProductDetail
-            product={product}
-            extraDescription={extraDescription}
-          />
-          <Relatedproduct currentProduct={product.shopifyId} />
-        </>
-      ) : (
-        <div>{ERROR_MESSAGE}</div>
-      )}
-      <div className="full-bleed">
-        <Instagram />
-      </div>
-    </Layout>
+  return ( <>Test</>
+    // <Layout>
+    //   {!isEmpty(data) ? (
+    //     <>
+    //       {/* <SEO
+    //           title={name}
+    //           seoData={seo}
+    //           uri={link}
+    //           header={{ siteTitle: 'Gatsby WooCommerce Theme' }}
+    //           openGraphImage={getOgImage(seo)}
+    //         /> */}
+    //       <ProductDetail
+    //         product={product}
+    //         extraDescription={extraDescription}
+    //       />
+    //       <Relatedproduct currentProduct={product.shopifyId} />
+    //     </>
+    //   ) : (
+    //     <div>{ERROR_MESSAGE}</div>
+    //   )}
+    //   <div className="full-bleed">
+    //     <Instagram />
+    //   </div>
+    // </Layout>
   )
 }
 
-export const query = graphql`
-  query($handle: String!, $title: String!) {
-    shopifyProduct(handle: { eq: $handle }) {
-      id
-      title
-      handle
-      availableForSale
-      description
-      descriptionHtml
-      shopifyId
-      images {
-        localFile {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-      variants {
-        id
-        title
-        price
-        availableForSale
-        shopifyId
-        selectedOptions {
-          name
-          value
-        }
-      }
-      priceRange {
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-        minVariantPrice {
-          amount
-          currencyCode
-        }
-      }
-    }
-    desc: contentfulProductAdditionalDescription(productTitle: { eq: $title }) {
-      productTitle
-      description {
-        text {
-          text
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query($handle: String!, $title: String!) {
+//     shopifyProduct(handle: { eq: $handle }) {
+//       id
+//       title
+//       handle
+//       availableForSale
+//       description
+//       descriptionHtml
+//       shopifyId
+//       images {
+//         localFile {
+//           childImageSharp {
+//             gatsbyImageData
+//           }
+//         }
+//       }
+//       variants {
+//         id
+//         title
+//         price
+//         availableForSale
+//         shopifyId
+//         selectedOptions {
+//           name
+//           value
+//         }
+//       }
+//       priceRange {
+//         maxVariantPrice {
+//           amount
+//           currencyCode
+//         }
+//         minVariantPrice {
+//           amount
+//           currencyCode
+//         }
+//       }
+//     }
+//     desc: contentfulProductAdditionalDescription(productTitle: { eq: $title }) {
+//       productTitle
+//       description {
+//         text {
+//           text
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default SingleProductPage

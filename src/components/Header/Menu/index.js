@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuCart from '../MenuCart'
 import { FiMenu } from 'react-icons/fi'
 import {
   DesktopWrapper,
@@ -37,7 +36,6 @@ const Menu = ({ toggleMenu }) => {
             })}
         </InnerMenuWrapper>
       </DesktopWrapper>
-      <MenuCart />
     </MenuWrapper>
   )
 }
