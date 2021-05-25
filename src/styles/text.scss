@@ -1,0 +1,213 @@
+// @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800|Playfair+Display:400");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+//colors
+$color-text-blue: hsl(234, 47%, 31%);
+$color-text-pink: hsl(351, 81%, 94%);
+$color-text-white: hsl(0, 0%, 100%);
+
+//Font variables
+$playfair: "Playfair Display", serif;
+$work-sans: "Work Sans", sans-serif;
+
+//Font sizes
+$h1: 3.052rem;
+$h2: 2.441rem;
+$h3: 1.953rem;
+$h4: 1.563rem;
+$h5: 1.25rem;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: $work-sans;
+  font-weight: 400;
+  line-height: 1.75;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: $playfair;
+  font-weight: 400;
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.site-title {
+  color: $color-text-pink;
+  text-decoration: none;
+  font-weight: 900;
+  margin: 0 0 0 1rem;
+}
+
+.hero-title {
+  color: $color-text-white;
+  font-weight: 900;
+  text-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.16);
+  font-family: $work-sans;
+}
+
+.page-title {
+  color: $color-text-pink;
+  text-align: center;
+  font-weight: 900;
+  span {
+    color: $color-text-blue;
+  }
+}
+
+.page-title-alternative {
+  color: $color-text-blue;
+  font-weight: 900;
+  text-align: center;
+}
+
+.page-title--shop {
+  max-width: 580px;
+}
+
+.product-title {
+  color: $color-text-blue;
+  font-family: $work-sans;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-title--overview {
+  text-align: center;
+}
+
+.product-price--overview {
+  color: $color-text-blue;
+  font-family: $work-sans;
+}
+
+.product-price--detail {
+  color: $color-text-white;
+  font-family: $work-sans;
+  font-weight: 800;
+}
+
+.product-price--cart {
+  color: $color-text-blue;
+  font-family: $work-sans;
+  font-weight: 800;
+  text-align: right;
+  margin: 0;
+}
+
+.qty-controls--cart {
+  color: $color-text-blue;
+}
+
+.check-out--service-delivery {
+  color: $color-text-blue;
+}
+
+.check-out--ship-total {
+  color: $color-text-blue;
+  font-weight: bold;
+}
+
+.check-out--ship-minimum {
+  color: $color-text-blue;
+  margin-bottom: 1rem;
+}
+
+.check-out--checkout-button {
+  font-family: $playfair;
+  color: $color-text-pink;
+}
+
+.check-out--note-header {
+  font-family: $playfair;
+  color: $color-text-blue;
+  margin-bottom: 0;
+}
+
+.landingpage-p {
+  color: $color-text-blue;
+}
+
+.landingpage-h2 {
+  color: $color-text-pink;
+  font-weight: bold;
+}
+
+.related-product--header {
+  color: $color-text-white;
+  font-weight: 900;
+}
+
+.footer-text {
+  color: $color-text-white;
+}
+
+.usp-header {
+  font-family: $work-sans;
+  color: $color-text-pink;
+  margin: 0;
+}
+
+.usp-body {
+  color: $color-text-blue;
+}
+
+.block-header--blue {
+  color: $color-text-blue;
+  text-align: center;
+  font-weight: 900;
+}
+
+.order-body--header {
+  color: $color-text-white;
+  font-weight: bold;
+  margin: 0 0 1rem;
+  font-family: $work-sans;
+}
