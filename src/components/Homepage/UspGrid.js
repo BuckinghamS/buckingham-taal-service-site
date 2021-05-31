@@ -1,12 +1,14 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { ERROR_MESSAGE } from '../../utils'
+import ReactMarkdown from 'react-markdown'
 import {
   CellImage,
   CellText,
   Grid,
   GridCell,
   HeaderContainer,
+  Inner,
   UspContainer,
 } from './UspGridStyles'
 
@@ -32,7 +34,10 @@ const Uspgrid = ({ content }) => {
           <GridImage image={item.uspImage} alt={item.title} />
           <CellText>
             <h5 className="usp-header">{item.title}</h5> <br />{' '}
-            <p className="usp-body text_small">{item.text.text}</p>
+            <ReactMarkdown className="usp-body">
+              {item.text.text}
+            </ReactMarkdown>
+            {/* <p className="usp-body text_small">{item.text.text}</p> */}
           </CellText>
         </GridCell>
       ))
@@ -42,10 +47,12 @@ const Uspgrid = ({ content }) => {
 
   return (
     <UspContainer>
-      <HeaderContainer>
-        <h2 className="page-title">{name}</h2>
-      </HeaderContainer>
-      <Grid>{grid}</Grid>
+      <Inner>
+        <HeaderContainer>
+          <h2 className="block-header--white">{name}</h2>
+        </HeaderContainer>
+        <Grid>{grid}</Grid>
+      </Inner>
     </UspContainer>
   )
 }

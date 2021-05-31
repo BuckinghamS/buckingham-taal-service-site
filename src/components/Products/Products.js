@@ -4,7 +4,7 @@ import ProductCard from './ProductCard'
 import { ProductGrid } from './ProductsStyles'
 
 const Products = () => {
-  return (<>Test</>)
+  return <>Test</>
   // return (
   //   <StaticQuery
   //     query={graphql`

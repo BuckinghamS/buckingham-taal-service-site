@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 export const FooterWrapper = styled.footer`
-  background-color: hsl(234, 47%, 31%);
+  background-color: hsl(197, 39%, 93%);
   /* position: relative; */
   /* position: fixed; */
   left: 0;
@@ -69,10 +69,10 @@ export const PoweredByFooter = styled.div`
   font-size: 0.7rem;
   display: flex;
   justify-content: space-evenly;
-  
+
   a {
     color: white;
-    text-decoration: none
+    text-decoration: none;
   }
 
   a:hover {

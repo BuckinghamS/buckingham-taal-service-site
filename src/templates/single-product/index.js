@@ -14,7 +14,8 @@ const SingleProductPage = ({ data }) => {
   const extraDescription =
     data.desc && !isEmpty(data.desc) ? data.desc.description.text : ''
 
-  return ( <>Test</>
+  return (
+    <>Test</>
     // <Layout>
     //   {!isEmpty(data) ? (
     //     <>

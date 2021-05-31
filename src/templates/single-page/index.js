@@ -11,7 +11,8 @@ const PageTemplate = ({ data }) => {
     contentfulLandingPage: { internalName, hero, sections },
   } = data
 
-  return ( <>Test</>
+  return (
+    <>Test</>
     // <Layout>
     //   {!isEmpty(data) ? (
     //     <>

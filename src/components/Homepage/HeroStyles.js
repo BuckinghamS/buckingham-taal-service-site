@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export const HeroGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr; // stretch to the full frame
-  grid-template-rows: 600px; // 350 pixels tall
+  grid-template-rows: 1000px; // 350 pixels tall
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   align-content: center;
@@ -27,10 +27,10 @@ export const HeroGrid = styled.div`
   } // overlay objects like text, buttons, etc.
 `
 
-export const GoToShopButton = styled(Link)`
-  border: solid 1px hsl(0, 0%, 44%);
+export const GoDownButton = styled(Link)`
+  border: none;
   border-radius: 4px;
-  background-color: hsl(234, 47%, 31%);
+  background-color: transparent;
   padding: 5px 35px;
   margin: 2rem 0;
   display: flex;

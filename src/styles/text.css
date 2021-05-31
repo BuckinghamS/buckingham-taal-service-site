@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,9 +9,9 @@ body {
   word-wrap: break-word;
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 p {
@@ -24,7 +24,7 @@ h3,
 h4,
 h5 {
   margin: 3rem 0 1.38rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.3;
   text-rendering: optimizeLegibility;
@@ -61,21 +61,21 @@ small,
 }
 
 .site-title {
-  color: #fce3e7;
+  color: #375c56;
   text-decoration: none;
   font-weight: 900;
   margin: 0 0 0 1rem;
 }
 
 .hero-title {
-  color: white;
-  font-weight: 900;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  font-family: "Work Sans", sans-serif;
+  color: #375c56;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.953rem;
 }
 
 .page-title {
-  color: #fce3e7;
+  color: #375c56;
   text-align: center;
   font-weight: 900;
 }
@@ -112,7 +112,7 @@ small,
 }
 
 .product-price--detail {
-  color: white;
+  color: #375c56;
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
 }
@@ -125,71 +125,45 @@ small,
   margin: 0;
 }
 
-.qty-controls--cart {
-  color: #2a3174;
-}
-
-.check-out--service-delivery {
-  color: #2a3174;
-}
-
-.check-out--ship-total {
-  color: #2a3174;
-  font-weight: bold;
-}
-
-.check-out--ship-minimum {
-  color: #2a3174;
-  margin-bottom: 1rem;
-}
-
-.check-out--checkout-button {
-  font-family: "Playfair Display", serif;
-  color: #fce3e7;
-}
-
-.check-out--note-header {
-  font-family: "Playfair Display", serif;
-  color: #2a3174;
-  margin-bottom: 0;
-}
-
 .landingpage-p {
-  color: #2a3174;
+  color: #375c56;
 }
 
 .landingpage-h2 {
-  color: #fce3e7;
+  color: #375c56;
   font-weight: bold;
 }
 
 .related-product--header {
-  color: white;
+  color: #375c56;
   font-weight: 900;
 }
 
 .footer-text {
-  color: white;
+  color: #375c56;
 }
 
 .usp-header {
   font-family: "Work Sans", sans-serif;
-  color: #fce3e7;
   margin: 0;
 }
 
-.usp-body {
-  color: #2a3174;
+.usp-body p {
+  color: #e6f0f4;
 }
 
-.block-header--blue {
-  color: #2a3174;
+.white-text {
+  color: #e6f0f4;
+}
+
+.block-header--white {
+  color: #e6f0f4;
   text-align: center;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .order-body--header {
-  color: white;
+  color: #375c56;
   font-weight: bold;
   margin: 0 0 1rem;
   font-family: "Work Sans", sans-serif;
