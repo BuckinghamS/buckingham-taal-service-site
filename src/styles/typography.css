@@ -1,4 +1,5 @@
 @font-face {
 	font-family: 'MermaidSwashCaps';
-	src: url('./fonts/MermaidSwashCaps.woff2');
+	/* src: url('./fonts/MermaidSwashCaps.woff2'); */
+	src: url('src/styles/fonts/MermaidSwashCaps.woff2');
 }
