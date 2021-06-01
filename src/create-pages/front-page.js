@@ -6,8 +6,7 @@ const frontPageTemplate = require.resolve(`../templates/front-page/index.js`)
 // Get all the front page data.
 const GET_FRONT_PAGE = `
 query GET_FRONT_PAGE {
-  page:
-  contentfulLandingPage(slug: {eq: "frontpage"}) {
+  page: contentfulLandingPage(slug: {eq: "frontpage"}) {
     internalName
     hero {
       childContentfulComponentHeroTextTextNode {
@@ -36,6 +35,7 @@ query GET_FRONT_PAGE {
         }
         ... on ContentfulComponentText {
           id
+          title
           text {
             text
           }

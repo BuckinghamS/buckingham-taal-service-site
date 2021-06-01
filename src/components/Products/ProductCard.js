@@ -43,11 +43,11 @@ const ProductCard = ({ product }) => {
   const [available, setAvailable] = useState(productVariant.availableForSale)
 
   const checkAvailability = useCallback(
-    productId => {
-      client.product.fetch(productId).then(fetchedProduct => {
+    (productId) => {
+      client.product.fetch(productId).then((fetchedProduct) => {
         // this checks the currently selected variant for availability
         const result = fetchedProduct.variants.filter(
-          variant => variant.id === productVariant.shopifyId
+          (variant) => variant.id === productVariant.shopifyId
         )
         if (result.length > 0) {
           setAvailable(result[0].available)
@@ -66,7 +66,7 @@ const ProductCard = ({ product }) => {
     alt: `${title}-featured-image` || `featured-image`,
   }
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     setLoading(true)
 

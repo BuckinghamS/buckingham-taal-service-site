@@ -82,7 +82,7 @@ const Relatedproduct = ({ currentProduct }) => {
   //     <ProductContainer>{mappedProducts}</ProductContainer>
   //   </div>
   // )
-  return (<>Test</>)
+  return <>Test</>
 }
 
 export default Relatedproduct

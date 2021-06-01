@@ -33,7 +33,7 @@ module.exports = async ({ actions, graphql }) => {
   await fetchPages().then(({ pages }) => {
     // Create Single PAGE: Loop through all pages and create single pages for pages.
     pages &&
-      pages.map(page => {
+      pages.map((page) => {
         // If its not a custom template, create the page.
         if (!customTemplateSlugs.includes(page.slug)) {
           createPage({

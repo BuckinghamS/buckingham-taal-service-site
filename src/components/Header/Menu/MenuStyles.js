@@ -2,20 +2,22 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 export const MenuWrapper = styled.nav`
-  justify-content: flex-end;
+  justify-content: center;
   display: flex;
   align-items: center;
   flex: 1;
 `
 export const InnerMenuWrapper = styled.nav`
-  justify-content: flex-end;
+  justify-content: center;
   display: flex;
   align-items: center;
   flex: 1;
+  justify-content: space-evenly;
 `
 
 export const MenuItem = styled(Link)`
-  color: hsl(351, 81%, 94%);
+  color: hsl(0, 0%, 0%);
+  font-size: 11px;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -40,7 +42,18 @@ export const OpenIcon = styled.div`
 `
 
 export const DesktopWrapper = styled.div`
+width: 88%;
   @media only screen and (max-width: 767px) {
     display: none;
   }
+`
+
+export const LogoContainer = styled.figure`
+  display: flex;
+  align-items: center;
+  width: 409px;
+  position: relative;
+  margin: 0;
+  top: 40px;
+  left: 1rem;
 `

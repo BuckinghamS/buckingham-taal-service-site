@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const HeaderWrapper = styled.header`
-  background-color: hsl(234, 47%, 31%);
+  background-color: hsl(0, 0%, 100%);
   /* position: absolute; */
   position: sticky;
   top: 0;
@@ -23,10 +23,4 @@ export const NavContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-between;
-`
-
-export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 270px;
 `

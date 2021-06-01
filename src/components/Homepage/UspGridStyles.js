@@ -1,9 +1,16 @@
 import styled from '@emotion/styled'
 
 export const UspContainer = styled.div`
+  background-color: hsl(170, 25%, 29%);
   @media only screen and (max-width: 767px) {
     margin: 0 2rem;
   }
+`
+
+export const Inner = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 0 4rem 0;
 `
 
 export const HeaderContainer = styled.div`
@@ -11,7 +18,12 @@ export const HeaderContainer = styled.div`
 `
 
 export const Grid = styled.div`
-  display: grid;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   max-width: 1000px;
   margin: 0 auto;
@@ -24,20 +36,14 @@ export const Grid = styled.div`
   @media only screen and (max-width: 767px) {
     grid-template-columns: none;
     grid-gap: 1rem;
-  }
+  } */
 `
 
 export const GridCell = styled.div`
-  display: grid;
-  grid-template-columns: 110px 360px;
-  grid-column-gap: 1rem;
-  @media only screen and (max-width: 1024px) {
-    grid-template-columns: 110px 200px;
-  }
-  @media only screen and (max-width: 767px) {
-    grid-template-columns: none;
-    grid-template-rows: auto auto;
-  }
+  display: flex;
+  flex-flow: column;
+  width: 330px;
+  text-align: center;
 `
 
 export const CellText = styled.div`

@@ -29,7 +29,7 @@ module.exports = async ({ actions, graphql }) => {
 
       let allTheProducts = []
       products &&
-        products.edges.map(product => {
+        products.edges.map((product) => {
           allTheProducts.push(product)
         })
 
@@ -40,7 +40,7 @@ module.exports = async ({ actions, graphql }) => {
   // When the above fetchPosts is resolved, then create page and pass the data as pageContext to the page template.
   await fetchPosts().then(({ allProducts }) => {
     allProducts.length &&
-      allProducts.forEach(product => {
+      allProducts.forEach((product) => {
         createPage({
           path: `/shop/${product.node.handle}`,
           component: slash(singleProductTemplate),

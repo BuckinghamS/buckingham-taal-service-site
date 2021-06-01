@@ -8,7 +8,7 @@ import { HeaderTextContainer } from '../../styles/globalStyles'
 import Toaster from '../../components/Toaster'
 import Instagram from '../../components/SocialFeed/Instagram'
 
-const Shop = props => {
+const Shop = (props) => {
   const {
     pageContext: {
       page: { pageHeaderText, pageHeaderSubtext, header_image },
