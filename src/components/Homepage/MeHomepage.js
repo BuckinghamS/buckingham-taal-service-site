@@ -10,6 +10,7 @@ import {
 import ReactMarkdown from 'react-markdown'
 
 const MeHomepage = (props) => {
+  console.log(props)
   const { content } = props
   const { name, columns } = content && content[0]
 

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 //colors
-$color-text-blue: hsl(234, 47%, 31%);
+$color-text-orange: hsl(10, 79%, 60%);
 $color-text-white: hsl(197, 39%, 93%);
 $color-text-dark-green: hsl(170, 25%, 29%);
 
@@ -97,12 +97,12 @@ small,
 	text-align: center;
 	font-weight: 900;
 	span {
-		color: $color-text-blue;
+		// color: $color-text-blue;
 	}
 }
 
 .page-title-alternative {
-	color: $color-text-blue;
+	// color: $color-text-blue;
 	font-weight: 900;
 	text-align: center;
 }
@@ -112,7 +112,7 @@ small,
 }
 
 .product-title {
-	color: $color-text-blue;
+	// color: $color-text-blue;
 	font-family: $work-sans;
 	margin: 0 0 0.5rem 0;
 	font-weight: bold;
@@ -123,23 +123,10 @@ small,
 	text-align: center;
 }
 
-.product-price--overview {
-	color: $color-text-blue;
-	font-family: $work-sans;
-}
-
 .product-price--detail {
 	color: $color-text-dark-green;
 	font-family: $work-sans;
 	font-weight: 800;
-}
-
-.product-price--cart {
-	color: $color-text-blue;
-	font-family: $work-sans;
-	font-weight: 800;
-	text-align: right;
-	margin: 0;
 }
 
 .landingpage-p {
@@ -161,8 +148,8 @@ small,
 }
 
 .usp-header {
-	font-family: $work-sans;
-	// color: $color-text-pink;
+	font-family: $open-sans;
+	color: $color-text-orange;
 	margin: 0;
 }
 
@@ -182,9 +169,22 @@ small,
 	font-weight: bold;
 }
 
-.order-body--header {
-	color: $color-text-dark-green;
+.block-header--orange {
+	color: $color-text-orange;
+	text-align: center;
 	font-weight: bold;
-	margin: 0 0 1rem;
-	font-family: $work-sans;
+}
+
+.blog-preview-title {
+	font-family: $open-sans;
+	color: $color-text-orange;
+	margin: 0;
+	font-weight: bold;
+	padding-bottom: 1rem;
+}
+
+.blog-preview-body {
+	color: $color-text-dark-green;
+	font-family: $open-sans;
+	font-weight: bold;
 }

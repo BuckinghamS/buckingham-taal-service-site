@@ -7,9 +7,7 @@ import ChevronDown from './../../images/chevron_down.png'
 import SEO from '../../components/seo'
 import MeHomepage from '../../components/Homepage/MeHomepage'
 import Uspgrid from '../../components/Homepage/UspGrid'
-// import Discover from '../../components/Homepage/Discover'
-// import People from '../../components/Homepage/People'
-// import Order from '../../components/Homepage/Order'
+import LatestBlog from '../../components/Blog/LatestBlog'
 
 const Homepage = (props) => {
   console.log(props.pageContext)
@@ -33,18 +31,6 @@ const Homepage = (props) => {
 
   const USP_BLOCK_TITLE = 'Werkwijze'
   const UspGridData = sections.filter((item) => item.name === USP_BLOCK_TITLE)
-
-  console.log(UspGridData)
-
-  // const PEOPLE_BLOCK_TITLE = 'Tim & Ruth'
-  // const PeopleBlockData = sections.filter(
-  //   item => item.name === PEOPLE_BLOCK_TITLE
-  // )
-
-  // const ORDER_BLOCK_TITLE = 'bestellen & genieten'
-  // const OrderBlockData = sections.filter(
-  //   item => item.name === ORDER_BLOCK_TITLE
-  // )
 
   const heroImageFile = {
     img: image.localFile.childImageSharp.gatsbyImageData,
@@ -79,12 +65,9 @@ const Homepage = (props) => {
           <div>
             <Uspgrid content={UspGridData} />
           </div>
-          {/* <div className="full-bleed" style={{ paddingBottom: `5rem` }}>
-            <People content={PeopleBlockData} />
-          </div> */}
-          {/* <div className="full-bleed">
-            <Order content={OrderBlockData} />
-          </div> */}
+          <div>
+            <LatestBlog />
+          </div>
         </>
       ) : (
         <div>{ERROR_MESSAGE}</div>

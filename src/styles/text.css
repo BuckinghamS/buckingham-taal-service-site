@@ -80,12 +80,7 @@ small,
   font-weight: 900;
 }
 
-.page-title span {
-  color: #2a3174;
-}
-
 .page-title-alternative {
-  color: #2a3174;
   font-weight: 900;
   text-align: center;
 }
@@ -95,7 +90,6 @@ small,
 }
 
 .product-title {
-  color: #2a3174;
   font-family: "Work Sans", sans-serif;
   margin: 0 0 0.5rem 0;
   font-weight: bold;
@@ -106,23 +100,10 @@ small,
   text-align: center;
 }
 
-.product-price--overview {
-  color: #2a3174;
-  font-family: "Work Sans", sans-serif;
-}
-
 .product-price--detail {
   color: #375c56;
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
-}
-
-.product-price--cart {
-  color: #2a3174;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 800;
-  text-align: right;
-  margin: 0;
 }
 
 .landingpage-p {
@@ -144,7 +125,8 @@ small,
 }
 
 .usp-header {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #ea6348;
   margin: 0;
 }
 
@@ -162,10 +144,23 @@ small,
   font-weight: bold;
 }
 
-.order-body--header {
-  color: #375c56;
+.block-header--orange {
+  color: #ea6348;
+  text-align: center;
   font-weight: bold;
-  margin: 0 0 1rem;
-  font-family: "Work Sans", sans-serif;
+}
+
+.blog-preview-title {
+  font-family: "Open Sans", sans-serif;
+  color: #ea6348;
+  margin: 0;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.blog-preview-body {
+  color: #375c56;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 /*# sourceMappingURL=text.css.map */

@@ -8,8 +8,9 @@ export const UspContainer = styled.div`
 `
 
 export const Inner = styled.div`
-  margin: 120px auto;
+  margin: 0 auto;
   max-width: 1200px;
+  padding: 2rem 0 4rem 0;
 `
 
 export const HeaderContainer = styled.div`
