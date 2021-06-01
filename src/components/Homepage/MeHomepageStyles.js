@@ -28,6 +28,6 @@ export const ImageBlock = styled.figure`
 `
 
 export const TextBlock = styled.div`
-  height: 490px;
+  /* height: 490px; */
   width: 490px;
 `

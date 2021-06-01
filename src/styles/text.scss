@@ -90,6 +90,10 @@ small,
 	font-weight: 600;
 	font-family: $open-sans;
 	font-size: $h3;
+	position: relative;
+	left: 77%;
+	max-width: 540px;
+	text-align: left;
 }
 
 .page-title {
@@ -145,6 +149,13 @@ small,
 
 .footer-text {
 	color: $color-text-dark-green;
+}
+
+.me-header {
+	font-family: $open-sans;
+	color: $color-text-orange;
+	margin: 0 0 1rem 0;
+	font-weight: bold;
 }
 
 .usp-header {

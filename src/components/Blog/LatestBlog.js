@@ -7,9 +7,9 @@ import {
   BlogText,
   BlogTextButton,
   Inner,
-  ReadMoreButton,
   Wrapper,
 } from './BlogStyles'
+import {Button} from './../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 
 const BLOG_HEADER = 'Blog'
@@ -53,7 +53,6 @@ const LatestBlog = () => {
   `)
 
   const { content, title } = edges && edges[0].node
-  console.log(content)
   const {
     text: { text },
   } = content && content[0]
@@ -81,12 +80,12 @@ const LatestBlog = () => {
               </ReactMarkdown>
             )}
           </BlogText>
-          <ReadMoreButton to={'/'}>
+          <Button to={'/'}>
             <span>{LEES_VERDER}</span>
             <span style={{ paddingLeft: `8px` }}>
               {<HiOutlineChevronRight />}
             </span>
-          </ReadMoreButton>
+          </Button>
         </BlogTextButton>
         <BlogImage>
           {gatsbyImageData && (

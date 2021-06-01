@@ -7,7 +7,11 @@ import {
   TextBlock,
   Wrapper,
 } from './MeHomepageStyles'
+import {Button} from './../Elements'
 import ReactMarkdown from 'react-markdown'
+import { HiOutlineChevronRight } from 'react-icons/hi'
+
+const OFFERTE_FORMULIER = 'Offerteformulier'
 
 const MeHomepage = (props) => {
   console.log(props)
@@ -18,9 +22,16 @@ const MeHomepage = (props) => {
     if (content.text) {
       return (
         <TextBlock>
+          <h3 className="me-header">{content.title}</h3>
           <ReactMarkdown className="landingpage-p">
             {content.text.text}
           </ReactMarkdown>
+          <Button to={'/'}>
+            <span>{OFFERTE_FORMULIER}</span>
+            <span style={{ paddingLeft: `8px` }}>
+              {<HiOutlineChevronRight />}
+            </span>
+          </Button>
         </TextBlock>
       )
     } else if (content.image) {
