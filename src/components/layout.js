@@ -15,12 +15,24 @@ const Layout = ({ children }) => {
           title
         }
       }
+      contentfulComponentImage(title: { eq: "SiteLogo" }) {
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
     }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        image={data.contentfulComponentImage.image}
+      />
       <main>{children}</main>
       <Footer />
     </>

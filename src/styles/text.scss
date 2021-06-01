@@ -1,5 +1,6 @@
 // @import url("https://fonts.googleapis.com/css2?family=open-sans+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import './typography.css';
 
 //colors
 $color-text-orange: hsl(10, 79%, 60%);
@@ -8,7 +9,7 @@ $color-text-dark-green: hsl(170, 25%, 29%);
 
 //Font variables
 $open-sans: 'Open Sans', sans-serif;
-$work-sans: 'Work Sans', sans-serif;
+$mermaid: 'MermaidSwashCaps', sans-serif;
 
 //Font sizes
 $h1: 3.052rem;
@@ -21,7 +22,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: hsla(0, 0%, 0%, 0.8);
-	font-family: $work-sans;
+	font-family: $open-sans;
 	font-weight: 400;
 	line-height: 1.75;
 	word-wrap: break-word;
@@ -42,7 +43,7 @@ h3,
 h4,
 h5 {
 	margin: 3rem 0 1.38rem;
-	font-family: $open-sans;
+	font-family: $mermaid;
 	font-weight: 400;
 	line-height: 1.3;
 	text-rendering: optimizeLegibility;
@@ -117,7 +118,7 @@ small,
 
 .product-title {
 	// color: $color-text-blue;
-	font-family: $work-sans;
+	font-family: $open-sans;
 	margin: 0 0 0.5rem 0;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -129,7 +130,7 @@ small,
 
 .product-price--detail {
 	color: $color-text-dark-green;
-	font-family: $work-sans;
+	font-family: $open-sans;
 	font-weight: 800;
 }
 
@@ -152,7 +153,7 @@ small,
 }
 
 .me-header {
-	font-family: $open-sans;
+	font-family: $mermaid;
 	color: $color-text-orange;
 	margin: 0 0 1rem 0;
 	font-weight: bold;

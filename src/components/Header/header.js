@@ -1,4 +1,5 @@
-import * as React from 'react'
+import React, { useState } from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Menu from './Menu'
@@ -10,8 +11,17 @@ import {
   NavWrapper,
 } from './headerStyles'
 
-const Header = ({ siteTitle }) => {
-  const [showMenu, setShowMenu] = React.useState(false)
+const Header = (props) => {
+  console.log(props)
+  const {
+    siteTitle,
+    image: {
+      localFile: {
+        childImageSharp: { gatsbyImageData },
+      },
+    },
+  } = props
+  const [showMenu, setShowMenu] = useState(false)
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
@@ -21,12 +31,11 @@ const Header = ({ siteTitle }) => {
     <HeaderWrapper>
       <NavWrapper>
         <NavContainer>
-          <LogoContainer>
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <h2 className="site-title">{siteTitle}</h2>
-            </Link>
-          </LogoContainer>
-          <Menu toggleMenu={toggleMenu} />
+          <Menu
+            toggleMenu={toggleMenu}
+            gatsbyImageData={gatsbyImageData}
+            siteTitle={siteTitle}
+          />
           <Sidebar toggleMenu={toggleMenu} showMenu={showMenu} />
         </NavContainer>
       </NavWrapper>

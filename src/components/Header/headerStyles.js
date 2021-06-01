@@ -24,9 +24,3 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
-
-export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 270px;
-`

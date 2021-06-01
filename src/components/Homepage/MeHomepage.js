@@ -7,7 +7,7 @@ import {
   TextBlock,
   Wrapper,
 } from './MeHomepageStyles'
-import {Button} from './../Elements'
+import { Button } from './../Elements'
 import ReactMarkdown from 'react-markdown'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 

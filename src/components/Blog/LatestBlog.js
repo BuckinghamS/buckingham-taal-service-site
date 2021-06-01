@@ -1,6 +1,6 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
 import {
   BlogImage,
@@ -9,7 +9,7 @@ import {
   Inner,
   Wrapper,
 } from './BlogStyles'
-import {Button} from './../Elements'
+import { Button } from './../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 
 const BLOG_HEADER = 'Blog'
