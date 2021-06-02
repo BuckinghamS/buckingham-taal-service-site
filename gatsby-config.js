@@ -20,6 +20,7 @@ module.exports = {
         downloadLocal: true,
       },
     },
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
