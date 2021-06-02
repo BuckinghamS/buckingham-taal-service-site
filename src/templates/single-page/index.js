@@ -12,61 +12,59 @@ const PageTemplate = ({ data }) => {
   } = data
 
   return (
-    <>Test</>
-    // <Layout>
-    //   {!isEmpty(data) ? (
-    //     <>
-    //       <Hero hero={hero} />
-    //       <LandingPage page={sections} />
-    //     </>
-    //   ) : (
-    //     <div>{ERROR_MESSAGE}</div>
-    //   )}
-    // </Layout>
+    <Layout>
+      {!isEmpty(data) ? (
+        <>
+          <Hero hero={hero} internalName={internalName}/>
+          <LandingPage page={sections} />
+        </>
+      ) : (
+        <div>{ERROR_MESSAGE}</div>
+      )}
+    </Layout>
   )
 }
 
-// export const query = graphql`
-//   query($id: String) {
-//     contentfulLandingPage(id: { eq: $id }) {
-//       internalName
-//       hero {
-//         ... on ContentfulComponentContentpageHeader {
-//           id
-//           title
-//           pageHeaderText
-//           pageHeaderSubtext
-//           header_image {
-//             localFile {
-//               childImageSharp {
-//                 gatsbyImageData
-//               }
-//             }
-//           }
-//         }
-//       }
-//       sections {
-//         ... on ContentfulComponentText {
-//           id
-//           title
-//           text {
-//             text
-//           }
-//         }
-//         ... on ContentfulComponentImage {
-//           id
-//           title
-//           image {
-//             localFile {
-//               childImageSharp {
-//                 gatsbyImageData
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query ($id: String) {
+    contentfulLandingPage(id: { eq: $id }) {
+      internalName
+      hero {
+        childContentfulComponentHeroTextTextNode {
+          text
+        }
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+      sections {
+        name
+        columns {
+          ... on ContentfulComponentImage {
+            id
+            image {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+          ... on ContentfulComponentText {
+            id
+            title
+            text {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default PageTemplate

@@ -12,7 +12,6 @@ import {
 } from './headerStyles'
 
 const Header = (props) => {
-  console.log(props)
   const {
     siteTitle,
     image: {

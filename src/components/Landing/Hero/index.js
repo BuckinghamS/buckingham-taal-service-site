@@ -1,34 +1,39 @@
 import React from 'react'
 import { ERROR_MESSAGE } from '../../../utils'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { HeaderTextContainer } from '../../../styles/globalStyles'
+import { HeaderContainer, InnerContainer, ImageContainer, TextContainer } from '../../../styles/globalStyles'
 
-const LandingPageHero = ({ hero }) => {
-  const { title, pageHeaderText, pageHeaderSubtext, header_image } = hero
+const LandingPageHero = (props) => {
+  const { hero: {childContentfulComponentHeroTextTextNode: {text}, image: {localFile: {childImageSharp: {gatsbyImageData}}}}, internalName } = props && props
 
-  const heroImageFile = {
-    img: header_image?.localFile.childImageSharp.gatsbyImageData,
-    alt: title || ``,
-  }
+  console.log(props)
+
+  // const heroImageFile = {
+  //   img: header_image?.localFile.childImageSharp.gatsbyImageData,
+  //   alt: title || ``,
+  // }
 
   return (
     <>
-      {hero ? (
-        <div className="full-bleed">
-          {heroImageFile?.img && (
+      {internalName ? (
+        <HeaderContainer>
+          <InnerContainer>
+          {gatsbyImageData && (
+            <ImageContainer>
             <GatsbyImage
-              image={heroImageFile.img}
-              alt={heroImageFile.alt}
+              image={gatsbyImageData}
+              alt={internalName}
               className="header-image--no-constrained header-image--height-small full-bleed"
-            />
+              />
+            </ImageContainer>
           )}
-          <HeaderTextContainer>
+          <TextContainer>
             <h1 className="page-title page-title--shop">
-              {pageHeaderText} <br />
-              <span>{pageHeaderSubtext}</span>
+              {internalName} <br />
             </h1>
-          </HeaderTextContainer>
-        </div>
+            </TextContainer>
+          </InnerContainer>
+        </HeaderContainer>
       ) : (
         <div>{ERROR_MESSAGE}</div>
       )}
