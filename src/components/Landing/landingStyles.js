@@ -14,6 +14,7 @@ export const Inner = styled.div`
   margin: 0 auto;
   justify-content: center;
   padding: 1rem 0 3rem;
+  min-height: 450px;
 `
 
 export const TextBlock = styled.div`
