@@ -1,24 +1,25 @@
 import styled from '@emotion/styled'
 
-// export const HeaderImageContainer = styled.div`
-
-// `
-
 export const HeaderContainer = styled.div`
   background-color: hsl(170, 11%, 78%);
-  width: 100%;
-  max-width: 1920px;
+  /* width: 100%;
+  max-width: 1920px; */
   margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 3%;
 `
 
 export const InnerContainer = styled.div`
-  width: 78%;
+  width: 60%;
   min-width: 800px;
   display: flex;
   flex-flow: row;
   flex-wrap: auto;
   margin: 0 auto;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `
 
 export const ImageContainer = styled.figure`
@@ -28,4 +29,5 @@ export const ImageContainer = styled.figure`
 
 export const TextContainer = styled.div`
   width: 490px;
+  margin-left: 2rem;
 `

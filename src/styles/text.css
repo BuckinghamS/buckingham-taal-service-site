@@ -119,6 +119,10 @@ small,
   color: #375c56;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .landingpage-h2 {
   color: #375c56;
   font-weight: bold;
@@ -156,6 +160,12 @@ small,
 
 .block-header--white {
   color: #e6f0f4;
+  text-align: center;
+  font-weight: bold;
+}
+
+.block-header--green {
+  color: #375c56;
   text-align: center;
   font-weight: bold;
 }

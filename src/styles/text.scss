@@ -143,6 +143,10 @@ small,
 	color: $color-text-dark-green;
 }
 
+.text-center {
+	text-align: center;
+}
+
 .landingpage-h2 {
 	color: $color-text-dark-green;
 	font-weight: bold;
@@ -182,6 +186,12 @@ small,
 
 .block-header--white {
 	color: $color-text-white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.block-header--green {
+	color: $color-text-dark-green;
 	text-align: center;
 	font-weight: bold;
 }
