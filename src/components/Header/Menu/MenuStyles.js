@@ -42,7 +42,7 @@ export const OpenIcon = styled.div`
 `
 
 export const DesktopWrapper = styled.div`
-width: 88%;
+  width: 88%;
   @media only screen and (max-width: 767px) {
     display: none;
   }

@@ -1,42 +1,36 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { ERROR_MESSAGE } from '../../utils'
-import { ImageWrapper, Paragraph, Wrapper } from './landingStyles'
+import { ImageWrapper, Paragraph, Inner, TextBlock, Wrapper } from './landingStyles'
 import ReactMarkdown from 'react-markdown'
 
 const LandingPage = ({ page }) => {
-  const ContentCreator = ({ content }) => {
-    if (content.text) {
-      return (
-        <Paragraph>
-          <ReactMarkdown className="landingpage-p">
-            {content.text.text}
-          </ReactMarkdown>
-        </Paragraph>
-      )
-    } else if (content.image) {
-      return (
-        <ImageWrapper>
-          <GatsbyImage
-            image={content.image.localFile.childImageSharp.gatsbyImageData}
-            alt={content.title}
-          />
-        </ImageWrapper>
-      )
-    }
+  console.log(page)
 
-    return null
-  }
+  const USP_BLOCK_TITLE = 'Werkwijze'
+  const OtherContent =
+    page && page.filter((item) => item.name !== USP_BLOCK_TITLE)
 
-  const pageContent =
-    page && page.length > 0 ? (
-      page.map((item, index) => <ContentCreator key={index} content={item} />)
+  console.log(OtherContent)
+
+  const sectionContent =
+    OtherContent && OtherContent.length > 0 ? (
+      OtherContent.map((item, index) =>
+        item.columns.map((content) => (
+          <TextBlock key={index}>
+            <h2 className="block-header--green">{content.title}</h2>
+            <ReactMarkdown className="landingpage-p text-center">{content.text.text}</ReactMarkdown>
+          </TextBlock>
+        ))
+      )
     ) : (
       <div>{ERROR_MESSAGE}</div>
     )
 
   return (
-    <Wrapper>{page ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}</Wrapper>
+    <Wrapper>
+      {OtherContent ? <Inner>{sectionContent}</Inner> : <div>{ERROR_MESSAGE}</div>}
+    </Wrapper>
   )
 }
 

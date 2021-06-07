@@ -1,34 +1,66 @@
 import React from 'react'
 import { ERROR_MESSAGE } from '../../../utils'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { HeaderTextContainer } from '../../../styles/globalStyles'
+import {
+  HeaderContainer,
+  InnerContainer,
+  ImageContainer,
+  TextContainer,
+} from '../../../styles/globalStyles'
+import ReactMarkdown from 'react-markdown'
+import { Button } from './../../Elements'
+import { HiOutlineChevronRight } from 'react-icons/hi'
 
-const LandingPageHero = ({ hero }) => {
-  const { title, pageHeaderText, pageHeaderSubtext, header_image } = hero
+const OFFERTE_FORMULIER = 'Offerteformulier'
 
-  const heroImageFile = {
-    img: header_image?.localFile.childImageSharp.gatsbyImageData,
-    alt: title || ``,
-  }
+const LandingPageHero = (props) => {
+  const {
+    hero: {
+      childContentfulComponentHeroTextTextNode: { text },
+      image: {
+        localFile: {
+          childImageSharp: { gatsbyImageData },
+        },
+      },
+    },
+    internalName,
+  } = props && props
+
+  console.log(props)
+
+  // const heroImageFile = {
+  //   img: header_image?.localFile.childImageSharp.gatsbyImageData,
+  //   alt: title || ``,
+  // }
 
   return (
     <>
-      {hero ? (
-        <div className="full-bleed">
-          {heroImageFile?.img && (
-            <GatsbyImage
-              image={heroImageFile.img}
-              alt={heroImageFile.alt}
-              className="header-image--no-constrained header-image--height-small full-bleed"
-            />
-          )}
-          <HeaderTextContainer>
-            <h1 className="page-title page-title--shop">
-              {pageHeaderText} <br />
-              <span>{pageHeaderSubtext}</span>
-            </h1>
-          </HeaderTextContainer>
-        </div>
+      {internalName ? (
+        <HeaderContainer>
+          <h1 className="page-title">
+            {internalName} <br />
+          </h1>
+          <InnerContainer>
+            {gatsbyImageData && (
+              <ImageContainer>
+                <GatsbyImage
+                  image={gatsbyImageData}
+                  alt={internalName}
+                  className="header-image--no-constrained header-image--height-small full-bleed"
+                />
+              </ImageContainer>
+            )}
+            <TextContainer>
+              {text && <ReactMarkdown className="landingpage-p">{text}</ReactMarkdown>}
+                        <Button to={'/'}>
+            <span>{OFFERTE_FORMULIER}</span>
+            <span style={{ paddingLeft: `8px` }}>
+              {<HiOutlineChevronRight />}
+            </span>
+          </Button>
+            </TextContainer>
+          </InnerContainer>
+        </HeaderContainer>
       ) : (
         <div>{ERROR_MESSAGE}</div>
       )}
