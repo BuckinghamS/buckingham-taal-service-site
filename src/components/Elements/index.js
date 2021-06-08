@@ -19,3 +19,7 @@ export const Button = styled(Link)`
     background-color: hsl(10, 79%, 50%);
   }
 `
+
+export const ButtonLink = styled(Link)`
+  color: hsl(37, 100%, 50%);
+`

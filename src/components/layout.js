@@ -8,6 +8,7 @@ import './layout.css'
 import '../styles/text.css'
 
 const Layout = ({ children }) => {
+  console.log(children)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

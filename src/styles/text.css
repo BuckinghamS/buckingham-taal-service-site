@@ -115,12 +115,12 @@ small,
   font-weight: 800;
 }
 
-.landingpage-p {
-  color: #375c56;
-}
-
 .text-center {
   text-align: center;
+}
+
+.landingpage-p {
+  color: #375c56;
 }
 
 .landingpage-h2 {
@@ -187,6 +187,21 @@ small,
 .blog-preview-body {
   color: #375c56;
   font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.blog-card-title {
+  font-family: "Open Sans", sans-serif;
+  color: #375c56;
+  font-weight: bold;
+}
+
+.blog-category {
+  text-align: center;
+  color: #e6f0f4;
+}
+
+.active {
   font-weight: bold;
 }
 /*# sourceMappingURL=text.css.map */

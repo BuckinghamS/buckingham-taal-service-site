@@ -51,13 +51,15 @@ const LandingPageHero = (props) => {
               </ImageContainer>
             )}
             <TextContainer>
-              {text && <ReactMarkdown className="landingpage-p">{text}</ReactMarkdown>}
-                        <Button to={'/'}>
-            <span>{OFFERTE_FORMULIER}</span>
-            <span style={{ paddingLeft: `8px` }}>
-              {<HiOutlineChevronRight />}
-            </span>
-          </Button>
+              {text && (
+                <ReactMarkdown className="landingpage-p">{text}</ReactMarkdown>
+              )}
+              <Button to={'/'}>
+                <span>{OFFERTE_FORMULIER}</span>
+                <span style={{ paddingLeft: `8px` }}>
+                  {<HiOutlineChevronRight />}
+                </span>
+              </Button>
             </TextContainer>
           </InnerContainer>
         </HeaderContainer>

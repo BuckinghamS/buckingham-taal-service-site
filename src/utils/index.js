@@ -16,3 +16,9 @@ export const URLCreator = (title) => {
 export const sanitize = (content) => {
   return process.browser ? DOMPurify.sanitize(content) : content
 }
+
+export const slugCreator = (title) => {
+  if (typeof title === 'string') {
+    return title && title.split(' ').join('-').toLowerCase()
+  }
+}
