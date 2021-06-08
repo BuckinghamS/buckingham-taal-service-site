@@ -1,7 +1,13 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { ERROR_MESSAGE } from '../../utils'
-import { ImageWrapper, Paragraph, Inner, TextBlock, Wrapper } from './landingStyles'
+import {
+  ImageWrapper,
+  Paragraph,
+  Inner,
+  TextBlock,
+  Wrapper,
+} from './landingStyles'
 import ReactMarkdown from 'react-markdown'
 
 const LandingPage = ({ page }) => {
@@ -19,7 +25,9 @@ const LandingPage = ({ page }) => {
         item.columns.map((content) => (
           <TextBlock key={index}>
             <h2 className="block-header--green">{content.title}</h2>
-            <ReactMarkdown className="landingpage-p text-center">{content.text.text}</ReactMarkdown>
+            <ReactMarkdown className="landingpage-p text-center">
+              {content.text.text}
+            </ReactMarkdown>
           </TextBlock>
         ))
       )
@@ -29,7 +37,11 @@ const LandingPage = ({ page }) => {
 
   return (
     <Wrapper>
-      {OtherContent ? <Inner>{sectionContent}</Inner> : <div>{ERROR_MESSAGE}</div>}
+      {OtherContent ? (
+        <Inner>{sectionContent}</Inner>
+      ) : (
+        <div>{ERROR_MESSAGE}</div>
+      )}
     </Wrapper>
   )
 }
