@@ -49,9 +49,9 @@ export const BodyInner = styled.div`
   flex-flow: column;
   align-items: center;
   div {
-      text-align: center;
-      max-width: 425px;
-      color: white;
+    text-align: center;
+    max-width: 425px;
+    color: white;
   }
   padding: 2rem 0;
 `
