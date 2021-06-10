@@ -30,9 +30,7 @@ const LandingPageHero = (props) => {
     <>
       {internalName ? (
         <HeaderContainer>
-          <h1 className="page-title">
-            {internalName} <br />
-          </h1>
+          <h1 className="page-title">{internalName}</h1>
           <InnerContainer>
             {gatsbyImageData && (
               <ImageContainer>

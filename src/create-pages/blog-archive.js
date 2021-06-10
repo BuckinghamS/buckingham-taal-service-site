@@ -2,13 +2,11 @@ const { slash } = require(`gatsby-core-utils`)
 const blogArchiveTemplate = require.resolve(
   `../templates/blog-archive/index.js`
 )
-// const { ImageFragment } = require('./fragments/image/index.js');
-// const { SeoFragment } = require('./fragments/seo/index.js');
 
 // Get all the blog page data.
 const GET_BLOG_PAGE = `
 query GET_BLOG_PAGE {
-  posts:   allContentfulBlogArticle(sort: {fields: createdAt, order: DESC}) {
+  posts: allContentfulBlogArticle(sort: {fields: createdAt, order: DESC}) {
     edges {
       node {
         title
