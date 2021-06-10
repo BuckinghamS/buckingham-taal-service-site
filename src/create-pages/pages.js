@@ -1,9 +1,6 @@
 const { slash } = require(`gatsby-core-utils`)
-// const customTemplatesUris = [ '/'  ];
-const customTemplateSlugs = ['/', 'frontpage']
+const customTemplateSlugs = ['/', 'frontpage', 'over-mij']
 const singlePageTemplate = require.resolve(`../templates/single-page/index.js`)
-// const { ImageFragment } = require('./fragments/image/index');
-// const { SeoFragment } = require('./fragments/seo/index.js');
 
 // Get all the pages.
 const GET_PAGES = `
@@ -34,10 +31,17 @@ module.exports = async ({ actions, graphql }) => {
     // Create Single PAGE: Loop through all pages and create single pages for pages.
     pages &&
       pages.map((page) => {
+        let slug = page.internalName.split(' ').join('-').toLowerCase()
+
         // If its not a custom template, create the page.
-        if (!customTemplateSlugs.includes(page.slug)) {
+        if (
+          !customTemplateSlugs.includes(page.slug !== null ? page.slug : slug)
+        ) {
           createPage({
-            path: `${page.slug}`,
+            path:
+              page.slug !== null
+                ? `${page.slug}`
+                : `${page.internalName.split(' ').join('-').toLowerCase()}`,
             component: slash(singlePageTemplate),
             context: {
               id: page.id,
