@@ -1,6 +1,5 @@
 // @import url("https://fonts.googleapis.com/css2?family=open-sans+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-// @import '~/src/styles/typography.css';
 
 @font-face {
 	font-family: 'MermaidSwashCaps';
@@ -105,38 +104,13 @@ small,
 .page-title {
 	color: $color-text-dark-green;
 	text-align: center;
-	font-weight: 900;
-	span {
-		// color: $color-text-blue;
-	}
+	font-weight: bold;
 }
 
 .page-title-alternative {
 	// color: $color-text-blue;
 	font-weight: 900;
 	text-align: center;
-}
-
-.page-title--shop {
-	max-width: 580px;
-}
-
-.product-title {
-	// color: $color-text-blue;
-	font-family: $open-sans;
-	margin: 0 0 0.5rem 0;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.product-title--overview {
-	text-align: center;
-}
-
-.product-price--detail {
-	color: $color-text-dark-green;
-	font-family: $open-sans;
-	font-weight: 800;
 }
 
 .text-center {
@@ -152,9 +126,22 @@ small,
 	font-weight: bold;
 }
 
-.related-product--header {
+.blog-detail--header {
 	color: $color-text-dark-green;
-	font-weight: 900;
+	font-family: $open-sans;
+	font-weight: bold;
+}
+
+.blog-detail--header--p {
+	color: $color-text-dark-green;
+	font-weight: bold;
+}
+
+.related-blog--header {
+	color: $color-text-white;
+	font-weight: bold;
+	font-family: $open-sans;
+	text-align: center;
 }
 
 .footer-text {
