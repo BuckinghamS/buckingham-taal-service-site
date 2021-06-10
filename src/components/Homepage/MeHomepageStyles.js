@@ -9,8 +9,10 @@ export const Wrapper = styled.div`
 `
 
 export const InnerWrapper = styled.div`
-  width: 78%;
-  min-width: 800px;
+  @media only screen and (min-width: 1024px) {
+    width: 78%;
+    min-width: 800px;
+  }
   display: flex;
   flex-flow: row;
   flex-wrap: auto;
@@ -25,9 +27,15 @@ export const ImageBlock = styled.figure`
     width: 377px;
     height: 377px;
   }
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const TextBlock = styled.div`
   /* height: 490px; */
-  width: 490px;
+  max-width: 490px;
+  /* @media only screen and (max-width: 1024px) {
+      grid-template-rows: 100%; // 350 pixels tall
+  } */
 `

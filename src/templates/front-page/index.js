@@ -16,8 +16,6 @@ const Homepage = (props) => {
       page,
       page: {
         hero: {
-          ctaLink,
-          ctaText,
           image,
           childContentfulComponentHeroTextTextNode: { text },
         },
@@ -42,32 +40,24 @@ const Homepage = (props) => {
       <SEO title="Home" />
       {props.pageContext.page ? (
         <>
-          <div className="full-bleed">
-            <HeroGrid>
-              {heroImageFile?.img && (
-                <GatsbyImage
-                  image={heroImageFile.img}
-                  alt={heroImageFile.alt}
-                  className="banner-image-div"
-                />
-              )}
-              <div className="banner-text-div">
-                <h1 className="hero-title">{text}</h1>
-                <GoDownButton to={ctaLink}>
-                  <img src={ChevronDown} />
-                </GoDownButton>
-              </div>
-            </HeroGrid>
-          </div>
-          <div className="full-bleed">
-            <MeHomepage content={MeBlockData} />
-          </div>
-          <div>
-            <Uspgrid content={UspGridData} />
-          </div>
-          <div>
-            <LatestBlog />
-          </div>
+          <HeroGrid>
+            {heroImageFile?.img && (
+              <GatsbyImage
+                image={heroImageFile.img}
+                alt={heroImageFile.alt}
+                className="banner-image-div"
+              />
+            )}
+            <div className="banner-text-div">
+              <h1 className="hero-title">{text}</h1>
+              <GoDownButton to={'/'}>
+                <img src={ChevronDown} />
+              </GoDownButton>
+            </div>
+          </HeroGrid>
+          <MeHomepage content={MeBlockData} />
+          <Uspgrid content={UspGridData} />
+          <LatestBlog />
         </>
       ) : (
         <div>{ERROR_MESSAGE}</div>

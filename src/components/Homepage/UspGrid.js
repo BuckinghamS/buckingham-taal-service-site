@@ -33,9 +33,8 @@ const Uspgrid = ({ content }) => {
         <GridCell key={index}>
           <GridImage image={item.uspImage} alt={item.title} />
           <CellText>
-            <h5 className="usp-header">{item.title}</h5> <br />{' '}
+            <h5 className="usp-header">{item.title}</h5>
             <ReactMarkdown className="usp-body">{item.text.text}</ReactMarkdown>
-            {/* <p className="usp-body text_small">{item.text.text}</p> */}
           </CellText>
         </GridCell>
       ))

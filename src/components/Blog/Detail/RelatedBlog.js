@@ -53,7 +53,7 @@ const RelatedBlog = ({ currentBlog }) => {
     : null
 
   return (
-    <div className="full-bleed">
+    <div>
       <Banner>
         <HeaderContainer>
           <h2 className="related-blog--header">{RELATED_HEADER}</h2>

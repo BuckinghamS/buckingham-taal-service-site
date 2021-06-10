@@ -10,12 +10,13 @@ export const HeroGrid = styled.div`
   align-content: center;
   justify-content: center;
 
+  @media only screen and (max-width: 1024px) {
+    grid-template-rows: 100%; // 350 pixels tall
+  }
+
   .banner-image-div {
     grid-area: 1 / 1 / 2 / 2;
   } // image
-  .banner-overlay-div {
-    grid-area: 1 / 1 / 2 / 2;
-  } // gradient or other overlay
   .banner-text-div {
     grid-area: 1 / 1 / 2 / 2;
     z-index: 1;
@@ -24,6 +25,10 @@ export const HeroGrid = styled.div`
     place-items: center;
     display: inline-grid;
     max-width: 800px;
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
   } // overlay objects like text, buttons, etc.
 `
 

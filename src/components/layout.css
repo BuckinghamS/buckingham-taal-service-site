@@ -576,7 +576,7 @@ pre tt:after {
   }
 }
 
-.header-image--no-constrained {
+.image--no-constrained {
   display: inherit;
 }
 

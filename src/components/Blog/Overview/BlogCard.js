@@ -25,7 +25,7 @@ const Blogcard = ({ item }) => {
     content.filter((item) => item.image)[0].image?.localFile.childImageSharp
       .gatsbyImageData
 
-  const slug = `/blog/${slugCreator(title)}`
+  const slug = title && `/blog/${slugCreator(title)}`
 
   return (
     <CardWrapper to={slug}>
