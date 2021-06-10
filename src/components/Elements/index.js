@@ -22,4 +22,16 @@ export const Button = styled(Link)`
 
 export const ButtonLink = styled(Link)`
   color: hsl(37, 100%, 50%);
+  text-decoration: none;
+  transition: background-color ease-in-out 0.3s;
+  display: flex;
+  max-width: max-content;
+  span {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    color: hsl(37, 100%, 40%);
+  }
 `

@@ -13,7 +13,7 @@ export const HeaderContainer = styled.div`
 `
 
 export const InnerContainer = styled.div`
-  width: 60%;
+  width: 50%;
   min-width: 800px;
   display: flex;
   flex-flow: row;

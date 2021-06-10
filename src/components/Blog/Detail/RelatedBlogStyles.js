@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const Banner = styled.div`
-  background-color: hsl(234, 47%, 31%);
+  background-color: hsl(170, 25%, 29%);
 `
 export const HeaderContainer = styled.div`
   margin: 0 auto;
