@@ -28,7 +28,7 @@ export const ImageBlock = styled.figure`
     height: 377px;
   }
   @media only screen and (max-width: 1024px) {
-     display: none;
+    display: none;
   }
 `
 

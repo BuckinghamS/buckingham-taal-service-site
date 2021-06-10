@@ -92,7 +92,7 @@ const LatestBlog = () => {
         </BlogTextButton>
         <BlogImage>
           {gatsbyImageData && (
-            <GatsbyImage image={gatsbyImageData} alt={title} />
+            <GatsbyImage image={gatsbyImageData} alt={title} className="image--no-constrained"/>
           )}
         </BlogImage>
       </Inner>

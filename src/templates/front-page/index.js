@@ -55,15 +55,9 @@ const Homepage = (props) => {
               </GoDownButton>
             </div>
           </HeroGrid>
-          <div>
-            <MeHomepage content={MeBlockData} />
-          </div>
-          <div>
-            <Uspgrid content={UspGridData} />
-          </div>
-          <div>
-            <LatestBlog />
-          </div>
+          <MeHomepage content={MeBlockData} />
+          <Uspgrid content={UspGridData} />
+          <LatestBlog />
         </>
       ) : (
         <div>{ERROR_MESSAGE}</div>

@@ -4,6 +4,9 @@ import { Link } from 'gatsby'
 export const Wrapper = styled.div`
   background-color: hsl(170, 10.9%, 78.4%);
   padding: 2rem;
+  @media only screen and (max-width: 1024px) {
+    padding: 1rem 0;
+  }
 `
 
 export const Inner = styled.div`
@@ -14,6 +17,9 @@ export const Inner = styled.div`
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  @media only screen and (max-width: 767px) {
+    flex-flow: column-reverse;
+  }
 `
 
 export const BlogTextButton = styled.div`
@@ -21,9 +27,11 @@ export const BlogTextButton = styled.div`
   /* max-height: 400px; */
   max-width: 740px;
   padding: 2rem;
-  position: relative;
   left: 120px;
   z-index: 1;
+  @media only screen and (min-width: 1024px) {
+    position: relative;
+  }
 `
 
 export const BlogText = styled.article`
@@ -34,4 +42,7 @@ export const BlogText = styled.article`
 export const BlogImage = styled.figure`
   max-width: 828px;
   max-height: 621px;
+  @media only screen and (max-width: 767px) {
+    margin: 0;
+  }
 `
