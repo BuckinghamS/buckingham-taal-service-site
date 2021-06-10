@@ -26,13 +26,6 @@ const LandingPageHero = (props) => {
     internalName,
   } = props && props
 
-  console.log(props)
-
-  // const heroImageFile = {
-  //   img: header_image?.localFile.childImageSharp.gatsbyImageData,
-  //   alt: title || ``,
-  // }
-
   return (
     <>
       {internalName ? (
@@ -46,7 +39,7 @@ const LandingPageHero = (props) => {
                 <GatsbyImage
                   image={gatsbyImageData}
                   alt={internalName}
-                  className="header-image--no-constrained header-image--height-small full-bleed"
+                  className="header-image--no-constrained header-image--height-small"
                 />
               </ImageContainer>
             )}

@@ -11,6 +11,7 @@ import {
 } from './BlogStyles'
 import { Button } from './../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
+import { slugCreator } from '../../utils'
 
 const BLOG_HEADER = 'Blog'
 const LEES_VERDER = 'Lees verder'
@@ -67,6 +68,8 @@ const LatestBlog = () => {
   const maxIntroText =
     text && text.replace(/^(.{350}[^\s]*).*/, '$1') + '\n' + '...'
 
+  const slug = title && `/blog/${slugCreator(title)}`
+
   return (
     <Wrapper>
       <h2 className="block-header--orange">{BLOG_HEADER}</h2>
@@ -80,7 +83,7 @@ const LatestBlog = () => {
               </ReactMarkdown>
             )}
           </BlogText>
-          <Button to={'/'}>
+          <Button to={slug}>
             <span>{LEES_VERDER}</span>
             <span style={{ paddingLeft: `8px` }}>
               {<HiOutlineChevronRight />}

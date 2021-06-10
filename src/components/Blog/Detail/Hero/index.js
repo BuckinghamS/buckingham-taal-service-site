@@ -40,7 +40,7 @@ const BlogPageHero = (props) => {
                 <GatsbyImage
                   image={gatsbyImageData}
                   alt={title ?? 'blog-hero-image'}
-                  className="header-image--no-constrained header-image--height-small full-bleed"
+                  className="header-image--no-constrained header-image--height-small"
                 />
               </ImageContainer>
             )}
