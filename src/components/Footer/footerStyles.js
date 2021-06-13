@@ -30,16 +30,27 @@ export const FooterContainer = styled.div`
   }
 `
 
+export const FooterImage = styled(Link)`
+  height: auto;
+  width: 270px;
+`
+
 export const LeftFooter = styled.div`
-  color: white;
+  color: hsl(170, 25%, 29%);
   text-align: right;
+  p {
+    margin: 0
+  }
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
 `
 
 export const RightFooter = styled.div`
-  color: white;
+  color: hsl(170, 25%, 29%);
+  p {
+    margin: 0
+  }
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -55,12 +66,12 @@ export const MenuWrapper = styled.nav`
 `
 
 export const MenuItem = styled(Link)`
-  color: white;
+  color: hsl(170, 25%, 29%);
   text-decoration: none;
   text-transform: capitalize;
 
   &:hover {
-    opacity: 0.7;
+    color: hsl(170, 25%, 39%);
   }
 `
 export const PoweredByFooter = styled.div`
@@ -71,12 +82,12 @@ export const PoweredByFooter = styled.div`
   justify-content: space-evenly;
 
   a {
-    color: white;
+    color: hsl(170, 25%, 29%);
     text-decoration: none;
   }
 
   a:hover {
-    color: #d1dce5;
+    color: hsl(170, 25%, 39%);
   }
 
   @media only screen and (max-width: 600px) {
