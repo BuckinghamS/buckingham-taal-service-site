@@ -39,7 +39,7 @@ export const LeftFooter = styled.div`
   color: hsl(170, 25%, 29%);
   text-align: right;
   p {
-    margin: 0
+    margin: 0;
   }
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -49,7 +49,7 @@ export const LeftFooter = styled.div`
 export const RightFooter = styled.div`
   color: hsl(170, 25%, 29%);
   p {
-    margin: 0
+    margin: 0;
   }
   @media only screen and (max-width: 768px) {
     text-align: center;

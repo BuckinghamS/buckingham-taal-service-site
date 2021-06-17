@@ -59,7 +59,11 @@ module.exports = async ({ actions, graphql }) => {
         posts.edges.map((post) => {
           allThePosts.push(post)
         })
-      return { page: page, allPosts: allThePosts, categories: categories }
+      return {
+        page: page,
+        allPosts: allThePosts,
+        categories: categories,
+      }
     })
   }
 
