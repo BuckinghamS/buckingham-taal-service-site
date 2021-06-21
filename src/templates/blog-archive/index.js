@@ -7,11 +7,7 @@ const Index = (props) => {
     pageContext: { allPosts, categories },
   } = props
 
-  return (
-    <Layout>
-      {allPosts && <BlogOverview allPosts={allPosts} categories={categories} />}
-    </Layout>
-  )
+  return <Layout>{allPosts && <BlogOverview allPosts={allPosts} categories={categories} />}</Layout>
 }
 
 export default Index

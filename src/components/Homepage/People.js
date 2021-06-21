@@ -17,10 +17,7 @@ const People = ({ content }) => {
   const PeopleImage = ({ image, alt }) => {
     return image && alt ? (
       <ImageContainer>
-        <GatsbyImage
-          image={image.localFile.childImageSharp.gatsbyImageData}
-          alt={alt}
-        />
+        <GatsbyImage image={image.localFile.childImageSharp.gatsbyImageData} alt={alt} />
       </ImageContainer>
     ) : null
   }

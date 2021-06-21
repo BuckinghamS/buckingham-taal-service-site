@@ -2,14 +2,8 @@ import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
-import {
-  BlogImage,
-  BlogText,
-  BlogTextButton,
-  Inner,
-  Wrapper,
-} from './BlogStyles'
-import { Button } from './../Elements'
+import { BlogImage, BlogText, BlogTextButton, Inner, Wrapper } from './BlogStyles'
+import { ButtonLink } from './../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 import { slugCreator } from '../../utils'
 
@@ -21,10 +15,7 @@ const LatestBlog = () => {
     allContentfulBlogArticle: { edges },
   } = useStaticQuery(graphql`
     query LatestBlogQuery {
-      allContentfulBlogArticle(
-        sort: { fields: createdAt, order: DESC }
-        limit: 1
-      ) {
+      allContentfulBlogArticle(sort: { fields: createdAt, order: DESC }, limit: 1) {
         edges {
           node {
             title
@@ -65,8 +56,7 @@ const LatestBlog = () => {
     },
   } = content && content.filter((item) => item.image)[0]
 
-  const maxIntroText =
-    text && text.replace(/^(.{350}[^\s]*).*/, '$1') + '\n' + '...'
+  const maxIntroText = text && text.replace(/^(.{350}[^\s]*).*/, '$1') + '\n' + '...'
 
   const slug = title && `/blog/${slugCreator(title)}`
 
@@ -77,26 +67,16 @@ const LatestBlog = () => {
         <BlogTextButton>
           <BlogText>
             {title && <h3 className="blog-preview-title">{title}</h3>}
-            {text && (
-              <ReactMarkdown className="blog-preview-body">
-                {maxIntroText}
-              </ReactMarkdown>
-            )}
+            {text && <ReactMarkdown className="blog-preview-body">{maxIntroText}</ReactMarkdown>}
           </BlogText>
-          <Button to={slug}>
+          <ButtonLink to={slug}>
             <span>{LEES_VERDER}</span>
-            <span style={{ paddingLeft: `8px` }}>
-              {<HiOutlineChevronRight />}
-            </span>
-          </Button>
+            <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
+          </ButtonLink>
         </BlogTextButton>
         <BlogImage>
           {gatsbyImageData && (
-            <GatsbyImage
-              image={gatsbyImageData}
-              alt={title}
-              className="image--no-constrained"
-            />
+            <GatsbyImage image={gatsbyImageData} alt={title} className="image--no-constrained" />
           )}
         </BlogImage>
       </Inner>

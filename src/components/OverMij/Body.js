@@ -46,9 +46,7 @@ const Body = ({ sections }) => {
 
   return (
     <BodyWrapper>
-      <BodyInner>
-        {sections ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}
-      </BodyInner>
+      <BodyInner>{sections ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}</BodyInner>
     </BodyWrapper>
   )
 }

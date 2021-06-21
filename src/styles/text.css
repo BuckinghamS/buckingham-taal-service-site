@@ -65,6 +65,11 @@ small,
   text-align: right;
 }
 
+label {
+  color: #375c56;
+  font-size: 0.8rem;
+}
+
 .site-title {
   color: #375c56;
   text-decoration: none;

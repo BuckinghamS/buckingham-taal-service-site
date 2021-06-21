@@ -1,13 +1,8 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { ERROR_MESSAGE } from '../../utils'
-import {
-  ImageBlock,
-  InnerWrapper,
-  TextBlock,
-  Wrapper,
-} from './MeHomepageStyles'
-import { Button } from './../Elements'
+import { ImageBlock, InnerWrapper, TextBlock, Wrapper } from './MeHomepageStyles'
+import { ButtonLink } from './../Elements'
 import ReactMarkdown from 'react-markdown'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 
@@ -23,15 +18,11 @@ const MeHomepage = (props) => {
       return (
         <TextBlock>
           <h3 className="me-header">{content.title}</h3>
-          <ReactMarkdown className="landingpage-p">
-            {content.text.text}
-          </ReactMarkdown>
-          <Button to={'/'}>
+          <ReactMarkdown className="landingpage-p">{content.text.text}</ReactMarkdown>
+          <ButtonLink to={'/form'}>
             <span>{OFFERTE_FORMULIER}</span>
-            <span style={{ paddingLeft: `8px` }}>
-              {<HiOutlineChevronRight />}
-            </span>
-          </Button>
+            <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
+          </ButtonLink>
         </TextBlock>
       )
     } else if (content.image) {
@@ -50,18 +41,14 @@ const MeHomepage = (props) => {
 
   const pageContent =
     columns && columns.length > 0 ? (
-      columns.map((item, index) => (
-        <ContentCreator key={index} content={item} />
-      ))
+      columns.map((item, index) => <ContentCreator key={index} content={item} />)
     ) : (
       <div>{ERROR_MESSAGE}</div>
     )
 
   return (
     <Wrapper>
-      <InnerWrapper>
-        {content[0] ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}
-      </InnerWrapper>
+      <InnerWrapper>{content[0] ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}</InnerWrapper>
     </Wrapper>
   )
 }

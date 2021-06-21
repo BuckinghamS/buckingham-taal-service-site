@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 @font-face {
-	font-family: 'MermaidSwashCaps';
-	src: local(''), url('../fonts/MermaidSwashCaps.woff2') format('woff2');
+  font-family: 'MermaidSwashCaps';
+  src: local(''), url('../fonts/MermaidSwashCaps.woff2') format('woff2');
 }
 
 //colors
@@ -23,22 +23,22 @@ $h4: 1.563rem;
 $h5: 1.25rem;
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: hsla(0, 0%, 0%, 0.8);
-	font-family: $open-sans;
-	font-weight: 400;
-	line-height: 1.75;
-	word-wrap: break-word;
-	font-kerning: normal;
-	-moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-	-ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-	-webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-	font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: $open-sans;
+  font-weight: 400;
+  line-height: 1.75;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 p {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -46,174 +46,179 @@ h2,
 h3,
 h4,
 h5 {
-	margin: 3rem 0 1.38rem;
-	font-family: $mermaid;
-	font-weight: 400;
-	line-height: 1.3;
-	text-rendering: optimizeLegibility;
+  margin: 3rem 0 1.38rem;
+  font-family: $mermaid;
+  font-weight: 400;
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
-	margin-top: 0;
-	font-size: 3.052rem;
+  margin-top: 0;
+  font-size: 3.052rem;
 }
 
 h2 {
-	font-size: 2.441rem;
+  font-size: 2.441rem;
 }
 
 h3 {
-	font-size: 1.953rem;
+  font-size: 1.953rem;
 }
 
 h4 {
-	font-size: 1.563rem;
+  font-size: 1.563rem;
 }
 
 h5 {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 small,
 .text_small {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .text-align-right {
-	text-align: right;
+  text-align: right;
+}
+
+label {
+  color: $color-text-dark-green;
+  font-size: 0.8rem;
 }
 
 .site-title {
-	color: $color-text-dark-green;
-	text-decoration: none;
-	font-weight: 900;
-	margin: 0 0 0 1rem;
+  color: $color-text-dark-green;
+  text-decoration: none;
+  font-weight: 900;
+  margin: 0 0 0 1rem;
 }
 
 .hero-title {
-	color: $color-text-dark-green;
-	font-weight: 600;
-	font-family: $open-sans;
-	font-size: $h3;
-	position: relative;
-	left: 77%;
-	max-width: 540px;
-	text-align: left;
+  color: $color-text-dark-green;
+  font-weight: 600;
+  font-family: $open-sans;
+  font-size: $h3;
+  position: relative;
+  left: 77%;
+  max-width: 540px;
+  text-align: left;
 }
 
 .page-title {
-	color: $color-text-dark-green;
-	text-align: center;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  text-align: center;
+  font-weight: bold;
 }
 
 .page-title-alternative {
-	// color: $color-text-blue;
-	font-weight: 900;
-	text-align: center;
+  // color: $color-text-blue;
+  font-weight: 900;
+  text-align: center;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .landingpage-p {
-	color: $color-text-dark-green;
+  color: $color-text-dark-green;
 }
 
 .landingpage-h2 {
-	color: $color-text-dark-green;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  font-weight: bold;
 }
 
 .blog-detail--header {
-	color: $color-text-dark-green;
-	font-family: $open-sans;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  font-family: $open-sans;
+  font-weight: bold;
 }
 
 .blog-detail--header--p {
-	color: $color-text-dark-green;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  font-weight: bold;
 }
 
 .related-blog--header {
-	color: $color-text-white;
-	font-weight: bold;
-	font-family: $open-sans;
-	text-align: center;
+  color: $color-text-white;
+  font-weight: bold;
+  font-family: $open-sans;
+  text-align: center;
 }
 
 .footer-text {
-	color: $color-text-dark-green;
+  color: $color-text-dark-green;
 }
 
 .me-header {
-	font-family: $mermaid;
-	color: $color-text-orange;
-	margin: 0 0 1rem 0;
-	font-weight: bold;
+  font-family: $mermaid;
+  color: $color-text-orange;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
 }
 
 .usp-header {
-	font-family: $open-sans;
-	color: $color-text-orange;
-	margin: 0;
+  font-family: $open-sans;
+  color: $color-text-orange;
+  margin: 0;
 }
 
 .usp-body {
-	p {
-		color: $color-text-white;
-	}
+  p {
+    color: $color-text-white;
+  }
 }
 
 .white-text {
-	color: $color-text-white;
+  color: $color-text-white;
 }
 
 .block-header--white {
-	color: $color-text-white;
-	text-align: center;
-	font-weight: bold;
+  color: $color-text-white;
+  text-align: center;
+  font-weight: bold;
 }
 
 .block-header--green {
-	color: $color-text-dark-green;
-	text-align: center;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  text-align: center;
+  font-weight: bold;
 }
 
 .block-header--orange {
-	color: $color-text-orange;
-	text-align: center;
-	font-weight: bold;
+  color: $color-text-orange;
+  text-align: center;
+  font-weight: bold;
 }
 
 .blog-preview-title {
-	font-family: $open-sans;
-	color: $color-text-orange;
-	margin: 0;
-	font-weight: bold;
-	padding-bottom: 1rem;
+  font-family: $open-sans;
+  color: $color-text-orange;
+  margin: 0;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .blog-preview-body {
-	color: $color-text-dark-green;
-	font-family: $open-sans;
-	font-weight: bold;
+  color: $color-text-dark-green;
+  font-family: $open-sans;
+  font-weight: bold;
 }
 
 .blog-card-title {
-	font-family: $open-sans;
-	color: $color-text-dark-green;
-	font-weight: bold;
+  font-family: $open-sans;
+  color: $color-text-dark-green;
+  font-weight: bold;
 }
 
 .blog-category {
-	text-align: center;
-	color: $color-text-white;
+  text-align: center;
+  color: $color-text-white;
 }
 
 .active {
-	font-weight: bold;
+  font-weight: bold;
 }

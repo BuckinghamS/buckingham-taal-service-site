@@ -31,11 +31,7 @@ const Menu = (props) => {
   const half = items && Math.ceil(items.length / 2)
   const firstHalf = items && half && items.slice(0, half)
   const secondHalf =
-    items &&
-    half &&
-    items
-      .slice(-half)
-      .filter((item) => item !== firstHalf[firstHalf.length - 1])
+    items && half && items.slice(-half).filter((item) => item !== firstHalf[firstHalf.length - 1])
 
   return (
     <MenuWrapper>

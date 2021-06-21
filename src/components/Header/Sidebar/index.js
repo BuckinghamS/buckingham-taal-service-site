@@ -44,8 +44,7 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
                 id={itemId}
                 key={i + menuItem.link}
                 className={
-                  'menu-item menu-item-type-custom menu-item-object-custom menu-item-home ' +
-                  itemId
+                  'menu-item menu-item-type-custom menu-item-object-custom menu-item-home ' + itemId
                 }
               >
                 <MenuLink
@@ -56,9 +55,7 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
                   //   width: '80px',
                   // }}
                   to={path}
-                  activeClassName={
-                    'current-menu-item current_page_item small-letters'
-                  }
+                  activeClassName={'current-menu-item current_page_item small-letters'}
                 >
                   {menuItem.name}
                 </MenuLink>

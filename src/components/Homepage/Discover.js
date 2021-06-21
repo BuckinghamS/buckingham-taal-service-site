@@ -14,17 +14,13 @@ const Discover = ({ content }) => {
   const { name, columns } = content[0]
 
   const firstItem = columns && columns.length > 0 ? content[0].columns[0] : null
-  const secondItem =
-    columns && columns.length > 0 ? content[0].columns[1] : null
+  const secondItem = columns && columns.length > 0 ? content[0].columns[1] : null
   const thirdItem = columns && columns.length > 0 ? content[0].columns[2] : null
 
   const GridImage = ({ image, alt }) => {
     return (
       <ProductPhoto>
-        <GatsbyImage
-          image={image.localFile.childImageSharp.gatsbyImageData}
-          alt={alt}
-        />
+        <GatsbyImage image={image.localFile.childImageSharp.gatsbyImageData} alt={alt} />
       </ProductPhoto>
     )
   }

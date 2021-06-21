@@ -50,9 +50,6 @@ const Homepage = (props) => {
             )}
             <div className="banner-text-div">
               <h1 className="hero-title">{text}</h1>
-              <GoDownButton to={'/'}>
-                <img src={ChevronDown} />
-              </GoDownButton>
             </div>
           </HeroGrid>
           <MeHomepage content={MeBlockData} />

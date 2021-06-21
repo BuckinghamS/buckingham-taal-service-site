@@ -4,12 +4,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Menu from './Menu'
 import Sidebar from './Sidebar'
-import {
-  HeaderWrapper,
-  LogoContainer,
-  NavContainer,
-  NavWrapper,
-} from './headerStyles'
+import { HeaderWrapper, LogoContainer, NavContainer, NavWrapper } from './headerStyles'
 
 const Header = (props) => {
   const {
@@ -30,11 +25,7 @@ const Header = (props) => {
     <HeaderWrapper>
       <NavWrapper>
         <NavContainer>
-          <Menu
-            toggleMenu={toggleMenu}
-            gatsbyImageData={gatsbyImageData}
-            siteTitle={siteTitle}
-          />
+          <Menu toggleMenu={toggleMenu} gatsbyImageData={gatsbyImageData} siteTitle={siteTitle} />
           <Sidebar toggleMenu={toggleMenu} showMenu={showMenu} />
         </NavContainer>
       </NavWrapper>

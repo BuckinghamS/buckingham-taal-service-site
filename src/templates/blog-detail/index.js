@@ -16,19 +16,13 @@ const BlogDetailTemplate = ({ data }) => {
 
   const HeroImage = content && content.filter((item) => item.image)[0]
   const BlogIntro = content && content.filter((item) => item.text)[0]
-  const BlogRest =
-    content &&
-    content.filter((items) => items !== BlogIntro && items !== HeroImage)
+  const BlogRest = content && content.filter((items) => items !== BlogIntro && items !== HeroImage)
 
   return (
     <Layout>
       {!isEmpty(data) ? (
         <>
-          <BlogPageHero
-            HeroImage={HeroImage}
-            title={title}
-            BlogIntro={BlogIntro}
-          />
+          <BlogPageHero HeroImage={HeroImage} title={title} BlogIntro={BlogIntro} />
           <BlogDetail data={BlogRest} />
           <RelatedBlog currentBlog={id} />
         </>

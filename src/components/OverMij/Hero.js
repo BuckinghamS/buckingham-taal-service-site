@@ -1,12 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import ReactMarkdown from 'react-markdown'
-import {
-  HeroContainer,
-  ImageContainer,
-  InnerContainer,
-  TextContainer,
-} from './OverMijStyles'
+import { HeroContainer, ImageContainer, InnerContainer, TextContainer } from './OverMijStyles'
 
 const Hero = ({ page }) => {
   const {
