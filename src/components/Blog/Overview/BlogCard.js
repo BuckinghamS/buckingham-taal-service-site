@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { CardWrapper, TextContainer } from './BlogCardStyles'
+import { ButtonContainer, CardWrapper, TextContainer } from './BlogCardStyles'
 import { ButtonLink } from './../../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 import { slugCreator } from '../../../utils'
@@ -16,8 +16,7 @@ const Blogcard = ({ item }) => {
     content &&
     content
       .filter((item) => item.title === BLOG_INTRO)[0]
-      .text.text.replace(/^(.{250}[^\s]*).*/, '$1') +
-      '\n' +
+      .text.text.replace(/^(.{215}[^\s]*).*/, '$1') +
       '...'
 
   const BlogImage =
@@ -32,12 +31,12 @@ const Blogcard = ({ item }) => {
       <TextContainer>
         {title && <h3 className="blog-card-title">{title}</h3>}
         {BlogPreview && <ReactMarkdown className="landingpage-p">{BlogPreview}</ReactMarkdown>}
-        {title && (
+        {title && (<ButtonContainer>
           <ButtonLink to={slug}>
             <span>{READ_MORE_LINK}</span>
             <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
           </ButtonLink>
-        )}
+        </ButtonContainer>)}
       </TextContainer>
     </CardWrapper>
   )
