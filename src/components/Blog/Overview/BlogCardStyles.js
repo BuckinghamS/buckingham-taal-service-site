@@ -8,7 +8,7 @@ export const CardWrapper = styled(Link)`
   height: 740px;
   text-decoration: none;
   @media only screen and (min-width: 767px) {
-      width: 470px;
+    width: 470px;
   }
 `
 
@@ -21,6 +21,6 @@ export const TextContainer = styled.article`
 
 export const ButtonContainer = styled.div`
   flex: 2;
-display: flex;
-align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 `

@@ -17,6 +17,10 @@ export const InnerContainer = styled.div`
   flex-flow: row;
   flex-wrap: auto;
   margin: 0 auto;
+  @media only screen and (max-width: 767px) {
+    min-width: 100%;
+    flex-flow: column;
+  }
 `
 
 export const ImageContainer = styled.figure`
@@ -27,10 +31,21 @@ export const ImageContainer = styled.figure`
     width: 377px;
     height: 377px;
   }
+  @media only screen and (max-width: 767px) {
+    padding: 0;
+    justify-content: center;
+    div {
+      width: 208px;
+      height: 208px;
+    }
+  }
 `
 
 export const TextContainer = styled.article`
   /* max-width: 490px; */
+  @media only screen and (max-width: 767px) {
+    padding: 2rem;
+  }
 `
 
 export const TextBlock = styled.article``
@@ -54,4 +69,8 @@ export const BodyInner = styled.div`
     color: white;
   }
   padding: 2rem 0;
+  @media only screen and (max-width: 767px) {
+    min-width: 100%;
+    padding: 2rem;
+  }
 `
