@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { FiX } from 'react-icons/fi'
-// import logo from '../../images/Logo_white.png'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   CloseIcon,
   Logo,
@@ -15,12 +14,27 @@ import {
 } from './SidebarStyles'
 
 const Sidebar = ({ showMenu, toggleMenu }) => {
-  const MenuOptions = [
-    { link: '/shop', name: 'Shop' },
-    { link: '/over-ons', name: 'Over ons' },
-    { link: '/faq', name: 'FAQ' },
-    { link: '/contact', name: 'Contact' },
-  ]
+  const {
+    contentfulMenu: { items },
+  } = useStaticQuery(graphql`
+    query MainMenuSideBarQuery {
+      contentfulMenu(internalName: { eq: "Main menu" }) {
+        items {
+          id
+          navLink
+          navName
+        }
+      }
+    }
+  `)
+
+  console.log(items)
+  // const MenuOptions = [
+  //   { link: '/shop', name: 'Shop' },
+  //   { link: '/over-ons', name: 'Over ons' },
+  //   { link: '/faq', name: 'FAQ' },
+  //   { link: '/contact', name: 'Contact' },
+  // ]
 
   return (
     <MenuWrapper className="menu-wrapper">
@@ -34,34 +48,36 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
           </CloseIcon>
         </LogoIcon>
         <MenuInnerContainer>
-          {MenuOptions.map((menuItem, i) => {
-            const path = menuItem.link
+          {items &&
+            items.map((menuItem, i) => {
+              const path = menuItem.navLink
 
-            const itemId = 'menu-item-' + menuItem.link.replace(/^\/|\/$/g, '')
+              const itemId = 'menu-item-' + menuItem.navLink.replace(/^\/|\/$/g, '')
 
-            return (
-              <MenuItem
-                id={itemId}
-                key={i + menuItem.link}
-                className={
-                  'menu-item menu-item-type-custom menu-item-object-custom menu-item-home ' + itemId
-                }
-              >
-                <MenuLink
-                  // style={{
-                  //   color: 'white',
-                  //   textDecoration: 'none',
-                  //   textTransform: 'lowercase',
-                  //   width: '80px',
-                  // }}
-                  to={path}
-                  activeClassName={'current-menu-item current_page_item small-letters'}
+              return (
+                <MenuItem
+                  id={itemId}
+                  key={i + menuItem.navLink}
+                  className={
+                    'menu-item menu-item-type-custom menu-item-object-custom menu-item-home ' +
+                    itemId
+                  }
                 >
-                  {menuItem.name}
-                </MenuLink>
-              </MenuItem>
-            )
-          })}
+                  <MenuLink
+                    // style={{
+                    //   color: 'white',
+                    //   textDecoration: 'none',
+                    //   textTransform: 'lowercase',
+                    //   width: '80px',
+                    // }}
+                    to={path}
+                    activeClassName={'current-menu-item current_page_item small-letters'}
+                  >
+                    {menuItem.navName}
+                  </MenuLink>
+                </MenuItem>
+              )
+            })}
         </MenuInnerContainer>
         <Overlay showMenu={showMenu} />
       </MobileMenu>
