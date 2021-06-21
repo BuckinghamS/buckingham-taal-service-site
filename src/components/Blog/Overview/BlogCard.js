@@ -16,8 +16,7 @@ const Blogcard = ({ item }) => {
     content &&
     content
       .filter((item) => item.title === BLOG_INTRO)[0]
-      .text.text.replace(/^(.{215}[^\s]*).*/, '$1') +
-      '...'
+      .text.text.replace(/^(.{215}[^\s]*).*/, '$1') + '...'
 
   const BlogImage =
     content &&
@@ -31,12 +30,14 @@ const Blogcard = ({ item }) => {
       <TextContainer>
         {title && <h3 className="blog-card-title">{title}</h3>}
         {BlogPreview && <ReactMarkdown className="landingpage-p">{BlogPreview}</ReactMarkdown>}
-        {title && (<ButtonContainer>
-          <ButtonLink to={slug}>
-            <span>{READ_MORE_LINK}</span>
-            <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
-          </ButtonLink>
-        </ButtonContainer>)}
+        {title && (
+          <ButtonContainer>
+            <ButtonLink to={slug}>
+              <span>{READ_MORE_LINK}</span>
+              <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
+            </ButtonLink>
+          </ButtonContainer>
+        )}
       </TextContainer>
     </CardWrapper>
   )
