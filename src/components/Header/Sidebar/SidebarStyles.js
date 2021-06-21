@@ -26,7 +26,7 @@ export const MenuWrapper = styled.nav`
 
 export const MobileMenu = styled.aside`
   list-style-type: none;
-  background-color: hsl(247, 69%, 15%);
+  background-color: hsl(170, 25%, 29%);
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -55,16 +55,15 @@ export const Overlay = styled.div`
 `
 
 export const MenuInnerContainer = styled.div`
-  display: grid;
   align-content: center;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 45px);
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: column;
 `
 
 export const MenuItem = styled.div`
-  margin: 0 2.5rem;
+  margin: 0.5rem 2.5rem;
 `
 
 export const MenuLink = styled(Link)`

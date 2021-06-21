@@ -6,6 +6,7 @@ import {
   DesktopWrapper,
   InnerMenuWrapper,
   LogoContainer,
+  LogoContainerMobile,
   MenuItem,
   MenuWrapper,
   NoLinkMenuItem,
@@ -35,6 +36,15 @@ const Menu = (props) => {
 
   return (
     <MenuWrapper>
+      <LogoContainerMobile>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          {gatsbyImageData ? (
+            <GatsbyImage image={gatsbyImageData} alt={siteTitle} />
+          ) : (
+            <h2 className="site-title">{siteTitle}</h2>
+          )}
+        </Link>
+      </LogoContainerMobile>
       <OpenIcon onClick={toggleMenu}>
         <NoLinkMenuItem>
           <FiMenu size={30} />

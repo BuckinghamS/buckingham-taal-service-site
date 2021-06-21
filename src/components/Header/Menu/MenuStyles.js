@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 export const MenuWrapper = styled.nav`
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
   align-items: center;
   flex: 1;
@@ -25,7 +25,7 @@ export const MenuItem = styled(Link)`
 `
 
 export const NoLinkMenuItem = styled.div`
-  color: hsl(351, 81%, 94%);
+  color: hsl(170, 25%, 29%);
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -56,4 +56,17 @@ export const LogoContainer = styled.figure`
   margin: 0;
   top: 40px;
   left: 1rem;
+`
+
+export const LogoContainerMobile = styled.figure`
+  position: relative;
+  top: 10px;
+  width: 200px;
+  margin: 0;
+  a {
+    display: flex;
+  }
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
 `
