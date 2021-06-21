@@ -10,6 +10,9 @@ export const Hero = styled.div`
   flex-flow: column;
   place-items: center;
   padding: 5% 0;
+  @media only screen and (max-width: 767px) {
+    padding: 15% 0;
+  }
 `
 
 export const Form = styled.form`
@@ -24,9 +27,6 @@ export const Form = styled.form`
   border-radius: 5px;
   box-shadow: 0 12px 24px 0 hsla(0, 0%, 0%, 0.15);
   margin: 0 auto;
-  /* label {
-
-    } */
   input,
   select,
   textarea {
@@ -35,6 +35,11 @@ export const Form = styled.form`
     padding: 0.75em 1rem;
     margin-bottom: 1.5rem;
     border-radius: 4px;
+  }
+  @media only screen and (max-width: 767px) {
+    transform: translateY(0);
+    margin: 1rem 0;
+    width: 100%;
   }
 `
 
@@ -45,5 +50,7 @@ export const ButtonContainer = styled.div`
 
 export const SuccessContainer = styled.div`
   display: flex;
-  max-width: c;
+  flex-flow: column;
+  align-items: center;
+  /* max-width: c; */
 `

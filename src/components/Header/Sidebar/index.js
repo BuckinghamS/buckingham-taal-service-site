@@ -28,14 +28,6 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
     }
   `)
 
-  console.log(items)
-  // const MenuOptions = [
-  //   { link: '/shop', name: 'Shop' },
-  //   { link: '/over-ons', name: 'Over ons' },
-  //   { link: '/faq', name: 'FAQ' },
-  //   { link: '/contact', name: 'Contact' },
-  // ]
-
   return (
     <MenuWrapper className="menu-wrapper">
       <MobileMenu showMenu={showMenu} onClick={toggleMenu}>
@@ -64,12 +56,6 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
                   }
                 >
                   <MenuLink
-                    // style={{
-                    //   color: 'white',
-                    //   textDecoration: 'none',
-                    //   textTransform: 'lowercase',
-                    //   width: '80px',
-                    // }}
                     to={path}
                     activeClassName={'current-menu-item current_page_item small-letters'}
                   >
