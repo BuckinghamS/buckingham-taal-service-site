@@ -49,8 +49,8 @@ export const ButtonContainer = styled.div`
 `
 
 export const SuccessContainer = styled.div`
-display: flex;
-flex-flow: column;
-align-items: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   /* max-width: c; */
 `

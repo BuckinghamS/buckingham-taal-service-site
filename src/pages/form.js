@@ -28,14 +28,15 @@ const THANK_YOU =
   'Het formulier is succesvol verstuurd. Er wordt zo spoedig mogelijk contact met u opgenomen.'
 
 function ContactForm() {
-  // const [state, handleSubmit] = useForm('xayajlnn')
-    const [state, handleSubmit] = useForm(FORM_ID)
+  const [state, handleSubmit] = useForm(FORM_ID)
   if (state.succeeded) {
     return (
       <Form>
         <SuccessContainer>
           <AiOutlineCheckCircle size={48} />
-          <p className="landingpage-p" style={{marginTop: '0.5rem', textAlign: 'center'}}>{THANK_YOU}</p>
+          <p className="landingpage-p" style={{ marginTop: '0.5rem', textAlign: 'center' }}>
+            {THANK_YOU}
+          </p>
         </SuccessContainer>
       </Form>
     )
