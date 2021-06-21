@@ -41,8 +41,7 @@ const Footer = () => {
       }
     }
   `)
-  const { footerMenu, logo, footerDetailsLeft, footerDetailsRight } =
-    FooterData.footer
+  const { footerMenu, logo, footerDetailsLeft, footerDetailsRight } = FooterData.footer
 
   const footerImage = {
     img: logo.localFile?.childImageSharp?.gatsbyImageData,
@@ -77,9 +76,7 @@ const Footer = () => {
         )}
         {footerDetailsRight && (
           <RightFooter>
-            <ReactMarkdown>
-              {footerDetailsRight.footerDetailsRight}
-            </ReactMarkdown>
+            <ReactMarkdown>{footerDetailsRight.footerDetailsRight}</ReactMarkdown>
           </RightFooter>
         )}
         {menu && <MenuWrapper>{menu}</MenuWrapper>}

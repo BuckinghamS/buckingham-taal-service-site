@@ -69,10 +69,7 @@ const BlogOverview = (props) => {
     categories.edges &&
     categories.edges.length > 0 &&
     categories.edges.map((category, index) => (
-      <BlogCategory
-        key={index}
-        onClick={() => filterCategory(category.node.title)}
-      >
+      <BlogCategory key={index} onClick={() => filterCategory(category.node.title)}>
         <div onClick={() => setSelected(category.node.title)}>
           <Category category={category.node.title} selected={selected} />
         </div>
@@ -82,9 +79,7 @@ const BlogOverview = (props) => {
   return (
     <>
       <BlogHero>
-        <BlogCategoryContainer>
-          {categories.edges && mappedCategories}
-        </BlogCategoryContainer>
+        <BlogCategoryContainer>{categories.edges && mappedCategories}</BlogCategoryContainer>
       </BlogHero>
       {mappedCards}
       {showMore && <Button>Test</Button>}

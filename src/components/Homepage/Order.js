@@ -1,13 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { ERROR_MESSAGE } from '../../utils'
-import {
-  CellImage,
-  CellText,
-  DataCell,
-  Grid,
-  OrderWrapper,
-} from './OrderStyles'
+import { CellImage, CellText, DataCell, Grid, OrderWrapper } from './OrderStyles'
 
 const Order = ({ content }) => {
   const { name, columns } = content[0]
@@ -15,10 +9,7 @@ const Order = ({ content }) => {
   const GridImage = ({ image, alt }) => {
     return image && alt ? (
       <CellImage>
-        <GatsbyImage
-          image={image.localFile.childImageSharp.gatsbyImageData}
-          alt={alt}
-        />
+        <GatsbyImage image={image.localFile.childImageSharp.gatsbyImageData} alt={alt} />
       </CellImage>
     ) : null
   }

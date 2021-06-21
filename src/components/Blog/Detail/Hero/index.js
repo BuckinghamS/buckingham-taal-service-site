@@ -45,11 +45,7 @@ const BlogPageHero = (props) => {
               </ImageContainer>
             )}
             <TextContainer>
-              {text && (
-                <ReactMarkdown className="blog-detail--header--p">
-                  {text}
-                </ReactMarkdown>
-              )}
+              {text && <ReactMarkdown className="blog-detail--header--p">{text}</ReactMarkdown>}
             </TextContainer>
           </InnerContainer>
         </HeaderContainer>

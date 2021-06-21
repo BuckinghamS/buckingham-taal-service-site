@@ -1,7 +1,5 @@
 const { slash } = require(`gatsby-core-utils`)
-const blogArchiveTemplate = require.resolve(
-  `../templates/blog-archive/index.js`
-)
+const blogArchiveTemplate = require.resolve(`../templates/blog-archive/index.js`)
 
 // Get all the blog page data.
 const GET_BLOG_PAGE = `

@@ -34,9 +34,7 @@ module.exports = async ({ actions, graphql }) => {
         let slug = page.internalName.split(' ').join('-').toLowerCase()
 
         // If its not a custom template, create the page.
-        if (
-          !customTemplateSlugs.includes(page.slug !== null ? page.slug : slug)
-        ) {
+        if (!customTemplateSlugs.includes(page.slug !== null ? page.slug : slug)) {
           createPage({
             path:
               page.slug !== null

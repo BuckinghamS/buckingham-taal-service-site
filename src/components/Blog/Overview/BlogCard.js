@@ -22,8 +22,7 @@ const Blogcard = ({ item }) => {
 
   const BlogImage =
     content &&
-    content.filter((item) => item.image)[0].image?.localFile.childImageSharp
-      .gatsbyImageData
+    content.filter((item) => item.image)[0].image?.localFile.childImageSharp.gatsbyImageData
 
   const slug = title && `/blog/${slugCreator(title)}`
 
@@ -32,15 +31,11 @@ const Blogcard = ({ item }) => {
       {BlogImage && <GatsbyImage image={BlogImage} alt={title} />}
       <TextContainer>
         {title && <h3 className="blog-card-title">{title}</h3>}
-        {BlogPreview && (
-          <ReactMarkdown className="landingpage-p">{BlogPreview}</ReactMarkdown>
-        )}
+        {BlogPreview && <ReactMarkdown className="landingpage-p">{BlogPreview}</ReactMarkdown>}
         {title && (
           <ButtonLink to={slug}>
             <span>{READ_MORE_LINK}</span>
-            <span style={{ paddingLeft: `8px` }}>
-              {<HiOutlineChevronRight />}
-            </span>
+            <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
           </ButtonLink>
         )}
       </TextContainer>

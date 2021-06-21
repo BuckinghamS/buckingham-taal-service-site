@@ -17,9 +17,7 @@ const BlogDetail = (props) => {
     if (content.text) {
       return (
         <TextBlock>
-          <ReactMarkdown className="landingpage-p">
-            {content.text.text}
-          </ReactMarkdown>
+          <ReactMarkdown className="landingpage-p">{content.text.text}</ReactMarkdown>
         </TextBlock>
       )
     } else if (content.image) {
@@ -44,9 +42,7 @@ const BlogDetail = (props) => {
 
   return (
     <Wrapper>
-      <BodySection>
-        {data ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}
-      </BodySection>
+      <BodySection>{data ? <>{pageContent}</> : <div>{ERROR_MESSAGE}</div>}</BodySection>
     </Wrapper>
   )
 }

@@ -8,10 +8,7 @@ const RELATED_HEADER = 'Dit vind je misschien ook interessant'
 const RelatedBlog = ({ currentBlog }) => {
   const RelatedBlogs = useStaticQuery(graphql`
     query RelatedBlogs {
-      fourBlogPosts: allContentfulBlogArticle(
-        limit: 4
-        sort: { order: DESC, fields: createdAt }
-      ) {
+      fourBlogPosts: allContentfulBlogArticle(limit: 4, sort: { order: DESC, fields: createdAt }) {
         edges {
           node {
             id
@@ -47,9 +44,7 @@ const RelatedBlog = ({ currentBlog }) => {
 
   const maxThreeBlogPosts = otherRelatedBlogs.slice(0, 3)
   const mappedBlogPosts = maxThreeBlogPosts
-    ? maxThreeBlogPosts.map((item, index) => (
-        <BlogCard key={index} item={item.node} />
-      ))
+    ? maxThreeBlogPosts.map((item, index) => <BlogCard key={index} item={item.node} />)
     : null
 
   return (
