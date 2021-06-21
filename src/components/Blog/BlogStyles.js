@@ -37,6 +37,9 @@ export const BlogTextButton = styled.div`
 export const BlogText = styled.article`
   max-width: 80%;
   padding-bottom: 2rem;
+  @media only screen and (max-width: 1023px) {
+     max-width: 100%;
+  }
 `
 
 export const BlogImage = styled.figure`

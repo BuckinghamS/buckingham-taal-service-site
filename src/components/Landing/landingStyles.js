@@ -15,10 +15,16 @@ export const Inner = styled.div`
   justify-content: center;
   padding: 1rem 0 3rem;
   min-height: 450px;
+  @media only screen and (max-width: 767px) {
+    min-width: 100%;
+  }
 `
 
 export const TextBlock = styled.div`
   max-width: 50%;
+  @media only screen and (max-width: 1023px) {
+    max-width: 75%;
+  }
 `
 
 export const Paragraph = styled.section`
