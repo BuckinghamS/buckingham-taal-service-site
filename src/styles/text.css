@@ -118,6 +118,12 @@ label {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 767px) {
+  .blog-detail--header {
+    text-align: center;
+  }
+}
+
 .blog-detail--header--p {
   color: #375c56;
   font-weight: bold;

@@ -6,14 +6,9 @@ import { ERROR_MESSAGE } from '../../../utils'
 import { ImageBlock, TextBlock } from './BlogDetailStyles'
 
 const BlogDetail = (props) => {
-  console.log(props)
   const { data } = props
 
-  console.log(props)
-
   const ContentCreator = ({ content }) => {
-    console.log(content)
-
     if (content.text) {
       return (
         <TextBlock>
