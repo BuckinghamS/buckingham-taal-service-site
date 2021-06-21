@@ -22,6 +22,10 @@ export const BodySection = styled.div`
   min-width: 800px;
   margin: 0 auto;
   padding: 2rem 0;
+  @media only screen and (max-width: 767px) {
+    min-width: 100%;
+    padding: 2rem;
+  }
 `
 
 export const ImageBlock = styled.figure``
