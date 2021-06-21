@@ -3,6 +3,9 @@ import styled from '@emotion/styled'
 export const BlogHero = styled.div`
   background-color: hsl(170, 11%, 78%);
   height: 700px;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
 `
 
 export const BlogCategoryContainer = styled.div`
@@ -18,10 +21,13 @@ export const BlogGrid = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  transform: translateY(-24rem);
+  justify-items: center;
+  @media only screen and (min-width: 767px) {
+    transform: translateY(-24rem);
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
 `
 
 export const BlogEmptyState = styled.div`
