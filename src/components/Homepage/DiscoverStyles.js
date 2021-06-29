@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import * as BP from '../../styles/breakPoints'
 
 export const DiscoverContainer = styled.div`
   background-color: hsl(358, 71%, 91%);
   height: 300px;
   display: grid;
   place-content: center;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     display: none;
   }
 `
@@ -20,14 +21,14 @@ export const Grid = styled.div`
   transform: translateY(-3rem);
   padding: 0 1rem;
   justify-items: center;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     grid-template-columns: none;
     place-items: center;
   }
 `
 
 export const NoIpad = styled.div`
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     display: none;
   }
 `

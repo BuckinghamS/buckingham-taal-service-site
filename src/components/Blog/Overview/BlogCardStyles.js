@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import * as BP from '../../../styles/breakPoints'
 
 export const CardWrapper = styled(Link)`
   border-radius: 5px;
@@ -7,7 +8,7 @@ export const CardWrapper = styled(Link)`
   background-color: hsl(0, 0%, 100%);
   height: 740px;
   text-decoration: none;
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: ${BP.MIN_M}) {
     width: 470px;
   }
 `

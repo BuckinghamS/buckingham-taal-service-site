@@ -1,11 +1,17 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import * as BP from '../../../styles/breakPoints'
 
 export const MenuWrapper = styled.nav`
   justify-content: space-evenly;
   display: flex;
   align-items: center;
   flex: 1;
+  @media only screen and (max-width: ${BP.MAX_L}) {
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 `
 export const InnerMenuWrapper = styled.nav`
   justify-content: center;
@@ -36,14 +42,14 @@ export const NoLinkMenuItem = styled.div`
 
 export const OpenIcon = styled.div`
   cursor: pointer;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     display: none;
   }
 `
 
 export const DesktopWrapper = styled.div`
   width: 88%;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     display: none;
   }
 `
@@ -66,7 +72,7 @@ export const LogoContainerMobile = styled.figure`
   a {
     display: flex;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     display: none;
   }
 `

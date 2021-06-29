@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import * as BP from '../../styles/breakPoints'
 
 export const HeroGrid = styled.div`
   display: grid;
@@ -10,7 +11,7 @@ export const HeroGrid = styled.div`
   align-content: center;
   justify-content: center;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     grid-template-rows: 100%; // 350 pixels tall
   }
 
@@ -26,7 +27,7 @@ export const HeroGrid = styled.div`
     display: inline-grid;
     max-width: 800px;
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: ${BP.MAX_L}) {
       display: none;
     }
   } // overlay objects like text, buttons, etc.

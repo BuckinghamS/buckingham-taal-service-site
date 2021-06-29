@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import * as BP from '../../styles/breakPoints'
 
 export const FooterWrapper = styled.footer`
   background-color: hsl(197, 39%, 93%);
@@ -9,7 +10,7 @@ export const FooterWrapper = styled.footer`
   bottom: 0;
   width: 100%;
   padding: 6rem 0;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     padding: 2rem 0;
   }
 `
@@ -23,7 +24,7 @@ export const FooterContainer = styled.div`
   p {
     margin-bottom: 0;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1rem;
     place-items: center;
@@ -41,7 +42,7 @@ export const LeftFooter = styled.div`
   p {
     margin: 0;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     text-align: center;
   }
 `
@@ -51,7 +52,7 @@ export const RightFooter = styled.div`
   p {
     margin: 0;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     text-align: center;
   }
 `
@@ -60,7 +61,7 @@ export const MenuWrapper = styled.nav`
   display: grid;
   grid-template-rows: repeat(3, auto);
   margin-right: 1rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: ${BP.MAX_S}) {
     justify-items: center;
   }
 `
@@ -90,7 +91,7 @@ export const PoweredByFooter = styled.div`
     color: hsl(170, 25%, 39%);
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: ${BP.MAX_S}) {
     margin-top: 1rem;
     font-size: 0.5rem;
   }
