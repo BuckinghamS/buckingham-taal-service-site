@@ -39,18 +39,6 @@ export const query = graphql`
   query ($id: String) {
     contentfulLandingPage(id: { eq: $id }) {
       internalName
-      hero {
-        childContentfulComponentHeroTextTextNode {
-          text
-        }
-        image {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
       sections {
         name
         columns {
@@ -70,6 +58,27 @@ export const query = graphql`
             text {
               text
             }
+          }
+        }
+      }
+      hero {
+        ... on ContentfulComponentHero {
+          id
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          text {
+            text
+          }
+        }
+        ... on ContentfulComponentText {
+          id
+          text {
+            text
           }
         }
       }

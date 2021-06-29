@@ -10,7 +10,6 @@ import {
 import ReactMarkdown from 'react-markdown'
 
 const BlogPageHero = (props) => {
-  console.log(props)
   const {
     HeroImage: {
       image: {

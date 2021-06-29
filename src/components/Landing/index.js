@@ -5,12 +5,8 @@ import { ImageWrapper, Paragraph, Inner, TextBlock, Wrapper } from './landingSty
 import ReactMarkdown from 'react-markdown'
 
 const LandingPage = ({ page }) => {
-  console.log(page)
-
   const USP_BLOCK_TITLE = 'Werkwijze'
   const OtherContent = page && page.filter((item) => item.name !== USP_BLOCK_TITLE)
-
-  console.log(OtherContent)
 
   const sectionContent =
     OtherContent && OtherContent.length > 0 ? (

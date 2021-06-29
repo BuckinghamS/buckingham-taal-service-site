@@ -16,12 +16,8 @@ const OFFERTE_FORMULIER = 'Offerteformulier'
 const LandingPageHero = (props) => {
   const {
     hero: {
-      childContentfulComponentHeroTextTextNode: { text },
-      image: {
-        localFile: {
-          childImageSharp: { gatsbyImageData },
-        },
-      },
+      text,
+      image,
     },
     internalName,
   } = props && props
@@ -32,17 +28,17 @@ const LandingPageHero = (props) => {
         <HeaderContainer>
           <h1 className="page-title">{internalName}</h1>
           <InnerContainer>
-            {gatsbyImageData && (
+            {image?.localFile?.childImageSharp?.gatsbyImageData && (
               <ImageContainer>
                 <GatsbyImage
-                  image={gatsbyImageData}
+                  image={image?.localFile?.childImageSharp?.gatsbyImageData}
                   alt={internalName}
                   className="header-image--no-constrained header-image--height-small"
                 />
               </ImageContainer>
             )}
             <TextContainer>
-              {text && <ReactMarkdown className="landingpage-p">{text}</ReactMarkdown>}
+              {text && <ReactMarkdown className="landingpage-p">{text?.text}</ReactMarkdown>}
               <Button to={'/form'}>
                 <span>{OFFERTE_FORMULIER}</span>
                 <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>

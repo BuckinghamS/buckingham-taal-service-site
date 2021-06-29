@@ -27,7 +27,7 @@ const SUBMIT = 'Verstuur'
 const THANK_YOU =
   'Het formulier is succesvol verstuurd. Er wordt zo spoedig mogelijk contact met u opgenomen.'
 
-function ContactForm() {
+const ContactForm = () => {
   const [state, handleSubmit] = useForm(FORM_ID)
   if (state.succeeded) {
     return (
@@ -80,7 +80,7 @@ function ContactForm() {
   )
 }
 
-function App() {
+const Offerte = () => {
   return (
     <Layout>
       <Wrapper>
@@ -93,4 +93,4 @@ function App() {
     </Layout>
   )
 }
-export default App
+export default Offerte

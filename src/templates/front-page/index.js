@@ -10,14 +10,13 @@ import Uspgrid from '../../components/Homepage/UspGrid'
 import LatestBlog from '../../components/Blog/LatestBlog'
 
 const Homepage = (props) => {
-  console.log(props.pageContext)
   const {
     pageContext: {
       page,
       page: {
         hero: {
           image,
-          childContentfulComponentHeroTextTextNode: { text },
+          text: { text },
         },
         sections,
       },
