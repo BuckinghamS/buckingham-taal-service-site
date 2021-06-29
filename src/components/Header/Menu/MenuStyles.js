@@ -6,6 +6,11 @@ export const MenuWrapper = styled.nav`
   display: flex;
   align-items: center;
   flex: 1;
+  @media only screen and (max-width: 1023px) {
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 `
 export const InnerMenuWrapper = styled.nav`
   justify-content: center;
@@ -36,14 +41,14 @@ export const NoLinkMenuItem = styled.div`
 
 export const OpenIcon = styled.div`
   cursor: pointer;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     display: none;
   }
 `
 
 export const DesktopWrapper = styled.div`
   width: 88%;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1023px) {
     display: none;
   }
 `
@@ -66,7 +71,7 @@ export const LogoContainerMobile = styled.figure`
   a {
     display: flex;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1023px) {
     display: none;
   }
 `
