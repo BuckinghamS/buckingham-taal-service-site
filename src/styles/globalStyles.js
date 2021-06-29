@@ -19,11 +19,15 @@ export const InnerContainer = styled.div`
   flex-flow: row;
   flex-wrap: auto;
   margin: 0 auto;
+  @media only screen and (max-width: 1024px) {
+    flex-flow: column;
+    min-width: 100%;
+    place-items: center;
+  }
   @media only screen and (max-width: 767px) {
     flex-flow: column;
     min-width: 100%;
   }
-  /* justify-content: space-between; */
 `
 
 export const ImageContainer = styled.figure`

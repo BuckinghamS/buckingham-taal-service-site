@@ -33,8 +33,8 @@ export const BlogTextButton = styled.div`
     position: relative;
   }
   @media only screen and (max-width: 1024px) {
-    left: 0;
-    max-width: 80%;
+    max-width: 828px;
+    width: 100%;
   }
 `
 
@@ -46,7 +46,7 @@ export const BlogText = styled.article`
 export const BlogImage = styled.figure`
   max-width: 828px;
   max-height: 621px;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1024px) {
     margin: 0;
   }
 `
