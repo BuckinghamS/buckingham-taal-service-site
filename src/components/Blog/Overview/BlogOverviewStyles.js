@@ -26,6 +26,8 @@ export const BlogGrid = styled.div`
   justify-items: center;
   @media only screen and (min-width: 767px) {
     transform: translateY(-24rem);
+  }
+  @media only screen and (min-width: 1023px) {
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   }
 `
