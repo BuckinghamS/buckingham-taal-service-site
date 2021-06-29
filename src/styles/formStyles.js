@@ -36,6 +36,9 @@ export const Form = styled.form`
     margin-bottom: 1.5rem;
     border-radius: 4px;
   }
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+  }
   @media only screen and (max-width: 767px) {
     transform: translateY(0);
     margin: 1rem 0;
