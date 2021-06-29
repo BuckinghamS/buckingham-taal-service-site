@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as BP from '../../../styles/breakPoints'
 
 export const Wrapper = styled.article``
 
@@ -21,13 +22,13 @@ export const BodySection = styled.div`
   max-width: 50%;
   margin: 0 auto;
   padding: 2rem 0;
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     min-width: 800px;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     max-width: 80%;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     min-width: 100%;
     padding: 2rem;
   }

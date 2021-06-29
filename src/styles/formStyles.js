@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as BP from './breakPoints'
 
 export const Wrapper = styled.div`
   padding-bottom: 5%;
@@ -10,7 +11,7 @@ export const Hero = styled.div`
   flex-flow: column;
   place-items: center;
   padding: 5% 0;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     padding: 15% 0;
   }
 `
@@ -36,10 +37,10 @@ export const Form = styled.form`
     margin-bottom: 1.5rem;
     border-radius: 4px;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     width: 80%;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     transform: translateY(0);
     margin: 1rem 0;
     width: 100%;

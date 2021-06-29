@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as BP from '../../styles/breakPoints'
 
 export const OrderWrapper = styled.div`
   background-color: hsl(358, 71%, 91%);
@@ -7,7 +8,7 @@ export const OrderWrapper = styled.div`
   h2 {
     margin: 0 2rem;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     display: none;
   }
 `
@@ -19,11 +20,11 @@ export const Grid = styled.div`
   margin: 0 auto;
   grid-gap: 5%;
   padding: 3rem 0;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     grid-gap: 0;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     grid-template-columns: none;
     grid-gap: 1rem;
   }
@@ -36,7 +37,7 @@ export const DataCell = styled.div`
   align-items: center;
   text-align: center;
   padding: 0 2.5rem;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     padding: 0 1.5rem;
     justify-content: flex-start;
   }

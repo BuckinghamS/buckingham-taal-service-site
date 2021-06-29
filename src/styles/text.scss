@@ -135,7 +135,7 @@ label {
   color: $color-text-dark-green;
   font-family: $open-sans;
   font-weight: bold;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     text-align: center;
   }
 }

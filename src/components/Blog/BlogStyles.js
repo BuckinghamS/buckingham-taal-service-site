@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import * as BP from '../../styles/breakPoints'
 
 export const Wrapper = styled.div`
   background-color: hsl(170, 10.9%, 78.4%);
   padding: 2rem;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     padding: 1rem 0;
   }
 `
@@ -17,7 +17,7 @@ export const Inner = styled.div`
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     flex-flow: column-reverse;
   }
 `
@@ -29,10 +29,10 @@ export const BlogTextButton = styled.div`
   padding: 2rem;
   left: 120px;
   z-index: 1;
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     position: relative;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     max-width: 828px;
     width: 100%;
   }
@@ -46,7 +46,7 @@ export const BlogText = styled.article`
 export const BlogImage = styled.figure`
   max-width: 828px;
   max-height: 621px;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     margin: 0;
   }
 `

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as BP from '../../../styles/breakPoints'
 import { Link } from 'gatsby'
 
 export const LogoIcon = styled.div`
@@ -10,7 +11,7 @@ export const CloseIcon = styled.div`
   margin-left: auto;
   margin-top: 3%;
   cursor: pointer;
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: ${BP.MIN_S}) {
     margin-right: 32px;
   }
 `
@@ -23,7 +24,7 @@ export const MenuWrapper = styled.nav`
   display: flex;
   justify-content: end;
   align-items: center;
-  @media only screen and (min-width: 1023px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     display: none;
   }
 `

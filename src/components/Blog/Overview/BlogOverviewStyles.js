@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
+import * as BP from '../../../styles/breakPoints'
 
 export const BlogHero = styled.div`
   background-color: hsl(170, 11%, 78%);
   height: 700px;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     display: none;
   }
 `
@@ -24,10 +25,10 @@ export const BlogGrid = styled.div`
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
   justify-items: center;
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: ${BP.MIN_M}) {
     transform: translateY(-24rem);
   }
-  @media only screen and (min-width: 1023px) {
+  @media only screen and (min-width: ${BP.MIN_L}) {
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   }
 `

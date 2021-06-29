@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as BP from '../../styles/breakPoints'
 
 export const HeroContainer = styled.div`
   background-color: hsl(170, 11%, 78%);
@@ -17,10 +18,10 @@ export const InnerContainer = styled.div`
   flex-flow: row;
   flex-wrap: auto;
   margin: 0 auto;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     flex-flow: column;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     min-width: 100%;
   }
 `
@@ -33,11 +34,11 @@ export const ImageContainer = styled.figure`
     width: 377px;
     height: 377px;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     padding: 0;
     place-content: center;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     padding: 0;
     justify-content: center;
     div {
@@ -49,11 +50,11 @@ export const ImageContainer = styled.figure`
 
 export const TextContainer = styled.article`
   /* max-width: 490px; */
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: ${BP.MAX_L}) {
     width: 80%;
     margin: 0 auto;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     padding: 2rem;
   }
 `
@@ -79,7 +80,7 @@ export const BodyInner = styled.div`
     color: white;
   }
   padding: 2rem 0;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: ${BP.MAX_M}) {
     min-width: 100%;
     padding: 2rem;
   }
