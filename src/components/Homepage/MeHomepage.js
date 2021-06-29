@@ -9,7 +9,6 @@ import { HiOutlineChevronRight } from 'react-icons/hi'
 const OFFERTE_FORMULIER = 'Offerteformulier'
 
 const MeHomepage = (props) => {
-  console.log(props)
   const { content } = props
   const { name, columns } = content && content[0]
 

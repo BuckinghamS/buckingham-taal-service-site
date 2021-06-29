@@ -5,10 +5,7 @@ import { ERROR_MESSAGE } from './../../utils'
 import { BodyInner, BodyWrapper, ImageBlock, TextBlock } from './OverMijStyles'
 
 const Body = ({ sections }) => {
-  console.log(sections)
-
   const ContentCreator = ({ content }) => {
-    console.log(content)
     if (content.text) {
       return (
         <TextBlock>

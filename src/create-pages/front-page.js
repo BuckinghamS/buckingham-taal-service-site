@@ -9,13 +9,16 @@ query GET_FRONT_PAGE {
   page: contentfulLandingPage(slug: {eq: "frontpage"}) {
     internalName
     hero {
-      childContentfulComponentHeroTextTextNode {
-        text
-      }
-      image {
-        localFile {
-          childImageSharp {
-            gatsbyImageData
+      ... on ContentfulComponentHero {
+        id
+        text {
+          text
+        }
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
       }

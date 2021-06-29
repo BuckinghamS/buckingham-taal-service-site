@@ -9,7 +9,6 @@ import RelatedBlog from '../../components/Blog/Detail/RelatedBlog'
 const ERROR_LOADING = 'Kan de pagina niet laden.'
 
 const BlogDetailTemplate = ({ data }) => {
-  console.log(data)
   const {
     contentfulBlogArticle: { title, content, id },
   } = data && data

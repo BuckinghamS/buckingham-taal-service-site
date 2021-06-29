@@ -30,15 +30,16 @@ query GET_OVER_MIJ_PAGE {
       }
     }
     hero {
-      text {
-        text
-      }
-      id
-      internalName
-      image {
-        localFile {
-          childImageSharp {
-            gatsbyImageData
+      ... on ContentfulComponentHero {
+        id
+        text {
+          text
+        }
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
       }
