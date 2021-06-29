@@ -17,9 +17,11 @@ export const InnerContainer = styled.div`
   flex-flow: row;
   flex-wrap: auto;
   margin: 0 auto;
+  @media only screen and (max-width: 1024px) {
+    flex-flow: column;
+  }
   @media only screen and (max-width: 767px) {
     min-width: 100%;
-    flex-flow: column;
   }
 `
 
@@ -30,6 +32,10 @@ export const ImageContainer = styled.figure`
   div {
     width: 377px;
     height: 377px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 0;
+    place-content: center;
   }
   @media only screen and (max-width: 767px) {
     padding: 0;
@@ -43,6 +49,10 @@ export const ImageContainer = styled.figure`
 
 export const TextContainer = styled.article`
   /* max-width: 490px; */
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+    margin: 0 auto;
+  }
   @media only screen and (max-width: 767px) {
     padding: 2rem;
   }
