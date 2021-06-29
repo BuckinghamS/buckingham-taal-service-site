@@ -18,10 +18,15 @@ export const InnerTopSection = styled.div`
 `
 
 export const BodySection = styled.div`
-  width: 50%;
-  min-width: 800px;
+  max-width: 50%;
   margin: 0 auto;
   padding: 2rem 0;
+  @media only screen and (min-width: 1025px) {
+    min-width: 800px;
+  }
+  @media only screen and (max-width: 1024px) {
+    max-width: 80%;
+  }
   @media only screen and (max-width: 767px) {
     min-width: 100%;
     padding: 2rem;
@@ -30,4 +35,6 @@ export const BodySection = styled.div`
 
 export const ImageBlock = styled.figure``
 
-export const TextBlock = styled.div``
+export const TextBlock = styled.div`
+
+`

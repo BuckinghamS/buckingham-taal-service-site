@@ -38,6 +38,10 @@ export const ImageContainer = styled.figure`
 export const TextContainer = styled.div`
   width: 490px;
   margin-left: 2rem;
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+    margin: 0;
+  }
   @media only screen and (max-width: 767px) {
     width: 100%;
     margin: 0;

@@ -22,7 +22,12 @@ export const ProductContainer = styled.div`
   max-width: 65%;
   margin: 0 auto;
   transform: translateY(-3rem);
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1024px) {
+    max-width: 100%;
+    grid-row-gap: 2rem;
+    place-items: center;
+  }
+  @media only screen and (max-width: 769px) {
     grid-template-columns: none;
     max-width: 100%;
     place-items: center;
