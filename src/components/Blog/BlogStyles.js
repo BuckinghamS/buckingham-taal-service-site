@@ -17,7 +17,7 @@ export const Inner = styled.div`
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1024px) {
     flex-flow: column-reverse;
   }
 `
@@ -29,8 +29,12 @@ export const BlogTextButton = styled.div`
   padding: 2rem;
   left: 120px;
   z-index: 1;
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1025px) {
     position: relative;
+  }
+  @media only screen and (max-width: 1024px) {
+    left: 0;
+    max-width: 80%;
   }
 `
 
