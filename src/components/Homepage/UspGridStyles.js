@@ -20,6 +20,11 @@ export const Grid = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
+  @media only screen and (max-width: 1024px) {
+    align-items: center;
+    justify-items: center;
+    flex-flow: column;
+  }
   @media only screen and (max-width: 767px) {
     justify-content: center;
   }
