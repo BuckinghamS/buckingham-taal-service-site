@@ -29,7 +29,7 @@ export const InnerContainer = styled.div`
 export const ImageContainer = styled.figure`
   padding-right: 6%;
   display: flex;
-  place-items: center;
+  margin-top: 15%;
   div {
     width: 377px;
     height: 377px;
@@ -37,9 +37,9 @@ export const ImageContainer = styled.figure`
   @media only screen and (max-width: ${BP.MAX_L}) {
     padding: 0;
     place-content: center;
+    margin: 0;
   }
   @media only screen and (max-width: ${BP.MAX_M}) {
-    padding: 0;
     justify-content: center;
     div {
       width: 208px;
@@ -49,7 +49,6 @@ export const ImageContainer = styled.figure`
 `
 
 export const TextContainer = styled.article`
-  /* max-width: 490px; */
   @media only screen and (max-width: ${BP.MAX_L}) {
     width: 80%;
     margin: 0 auto;
