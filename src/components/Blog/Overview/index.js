@@ -6,6 +6,7 @@ import {
   BlogCategoryContainer,
   BlogGrid,
   BlogHero,
+  LoadMoreContainer,
 } from './BlogOverviewStyles'
 import { slice, concat } from 'lodash'
 import { Button } from '../../Elements'
@@ -18,6 +19,7 @@ const BlogOverview = (props) => {
   const LIMIT = 6
   const START_CAT = 'alles'
   const NO_BLOGS_FOUND = 'Geen gerelateerde blogs gevonden.'
+  const LOAD_MORE = 'Toon meer blogs'
 
   const [showMore, setShowMore] = useState(DATA.length > 6)
   const [filteredList, setFilteredList] = useState(DATA)
@@ -82,7 +84,7 @@ const BlogOverview = (props) => {
         <BlogCategoryContainer>{categories.edges && mappedCategories}</BlogCategoryContainer>
       </BlogHero>
       {mappedCards}
-      {showMore && <Button>Test</Button>}
+      {showMore && <LoadMoreContainer><Button onClick={loadMore}>{LOAD_MORE}</Button></LoadMoreContainer>}
     </>
   )
 }
