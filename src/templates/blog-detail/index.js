@@ -1,6 +1,7 @@
 import React from 'react'
 import isEmpty from 'lodash/isEmpty'
 import { graphql } from 'gatsby'
+import SEO from '../../components/seo'
 import Layout from '../../components/layout'
 import BlogDetail from '../../components/Blog/Detail'
 import BlogPageHero from '../../components/Blog/Detail/Hero'
@@ -19,6 +20,7 @@ const BlogDetailTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       {!isEmpty(data) ? (
         <>
           <BlogPageHero HeroImage={HeroImage} title={title} BlogIntro={BlogIntro} />
