@@ -34,10 +34,20 @@ export const BlogGrid = styled.div`
 `
 
 export const BlogEmptyState = styled.div`
-  transform: translateY(-24rem);
+  @media only screen and (min-width: ${BP.MIN_M}) {
+    transform: translateY(-24rem);
+  }
 `
 
 export const BlogCategory = styled.div`
   cursor: pointer;
   user-select: none;
+`
+
+export const LoadMoreContainer = styled.div`
+  display: flex;
+  place-content: center;
+  @media only screen and (min-width: ${BP.MIN_M}) {
+    transform: translateY(-16rem);
+  }
 `
