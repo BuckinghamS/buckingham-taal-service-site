@@ -135,7 +135,7 @@ label {
   color: $color-text-dark-green;
   font-family: $open-sans;
   font-weight: bold;
-  @media only screen and (max-width: ${BP.MAX_M}) {
+  @media only screen and (max-width: 768px) {
     text-align: center;
   }
 }
@@ -216,6 +216,9 @@ label {
   color: $color-text-dark-green;
   font-weight: bold;
   margin: 1.38rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .blog-category {

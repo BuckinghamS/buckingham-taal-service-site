@@ -29,7 +29,7 @@ export const BlogGrid = styled.div`
     transform: translateY(-24rem);
   }
   @media only screen and (min-width: ${BP.MIN_L}) {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 `
 

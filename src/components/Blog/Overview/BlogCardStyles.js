@@ -9,7 +9,7 @@ export const CardWrapper = styled(Link)`
   height: 740px;
   text-decoration: none;
   @media only screen and (min-width: ${BP.MIN_M}) {
-    width: 470px;
+    width: 420px;
   }
 `
 

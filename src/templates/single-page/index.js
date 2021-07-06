@@ -75,12 +75,6 @@ export const query = graphql`
             text
           }
         }
-        ... on ContentfulComponentText {
-          id
-          text {
-            text
-          }
-        }
       }
     }
   }

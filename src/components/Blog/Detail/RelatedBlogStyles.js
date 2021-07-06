@@ -16,9 +16,10 @@ export const HeaderContainer = styled.div`
   }
 `
 
-export const ProductContainer = styled.div`
+export const BlogContainer = styled.div`
+  justify-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
   grid-column-gap: 2rem;
   max-width: 65%;
   margin: 0 auto;
