@@ -22,6 +22,9 @@ export const BodySection = styled.div`
   max-width: 50%;
   margin: 0 auto;
   padding: 2rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   @media only screen and (min-width: ${BP.MIN_L}) {
     min-width: 800px;
   }

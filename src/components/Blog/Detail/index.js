@@ -10,9 +10,10 @@ const BlogDetail = (props) => {
 
   const ContentCreator = ({ content }) => {
     if (content.text) {
+      const {text} = content.text
       return (
         <TextBlock>
-          <ReactMarkdown className="landingpage-p">{content.text.text}</ReactMarkdown>
+          <ReactMarkdown className="landingpage-p">{text}</ReactMarkdown>
         </TextBlock>
       )
     } else if (content.image) {

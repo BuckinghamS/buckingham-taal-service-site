@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Banner, HeaderContainer, ProductContainer } from './RelatedBlogStyles'
+import { Banner, HeaderContainer, BlogContainer } from './RelatedBlogStyles'
 import BlogCard from '../Overview/BlogCard'
 
 const RELATED_HEADER = 'Dit vind je misschien ook interessant'
@@ -54,7 +54,7 @@ const RelatedBlog = ({ currentBlog }) => {
           <h2 className="related-blog--header">{RELATED_HEADER}</h2>
         </HeaderContainer>
       </Banner>
-      <ProductContainer>{mappedBlogPosts}</ProductContainer>
+      <BlogContainer>{mappedBlogPosts}</BlogContainer>
     </div>
   )
 }

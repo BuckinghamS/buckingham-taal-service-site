@@ -6,7 +6,6 @@ import { ButtonLink } from './../../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 import { slugCreator } from '../../../utils'
 
-const BLOG_INTRO = 'Blog Intro'
 const READ_MORE_LINK = 'Lees verder'
 
 const Blogcard = ({ item }) => {
@@ -14,9 +13,7 @@ const Blogcard = ({ item }) => {
 
   const BlogPreview =
     content &&
-    content
-      .filter((item) => item.title === BLOG_INTRO)[0]
-      .text.text.replace(/^(.{215}[^\s]*).*/, '$1') + '...'
+    content[0].text.text.replace(/^(.{215}[^\s]*).*/, '$1') + '...'
 
   const BlogImage =
     content &&
