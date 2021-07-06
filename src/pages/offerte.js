@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { ButtonContainer, Form, Hero, SuccessContainer, Wrapper } from '../styles/formStyles'
 import { Button } from '../components/Elements'
@@ -52,7 +53,6 @@ const ContactForm = () => {
       <input type="text" name="_gotcha" style={{ display: 'none' }} />
       <label htmlFor="telephone">{PHONE}</label>
       <input type="telephone" name="telefoon" id="telephone" placeholder={PH_PHONE}></input>
-      {/* <fieldset id="fs-frm-selects"> */}
       <label htmlFor="project_type">{PROJECT_TYPE}</label>
       <select name="project" id="project_type" required="yes">
         <option value="Choose" selected="" disabled="">
@@ -63,7 +63,6 @@ const ContactForm = () => {
         <option value="5">{OFC_EN_NL}</option>
         <option value="7">{REVISION}</option>
       </select>
-      {/* </fieldset> */}
       <label htmlFor="message">{DESCRIPTION}</label>
       <textarea rows="3" id="message" name="omschrijving" required="" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
@@ -83,6 +82,7 @@ const ContactForm = () => {
 const Offerte = () => {
   return (
     <Layout>
+      <SEO title={FORM_HEADER} />
       <Wrapper>
         <Hero>
           <h1 className="page-title">{FORM_HEADER}</h1>

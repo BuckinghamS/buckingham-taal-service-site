@@ -2,6 +2,7 @@ import React from 'react'
 import { isEmpty } from 'lodash'
 import { ERROR_MESSAGE } from '../../utils'
 import { graphql } from 'gatsby'
+import SEO from '../../components/seo'
 import Layout from '../../components/layout'
 import LandingPage from '../../components/Landing'
 import Hero from '../../components/Landing/Hero'
@@ -9,6 +10,7 @@ import Uspgrid from '../../components/Homepage/UspGrid'
 import LatestBlog from '../../components/Blog/LatestBlog'
 
 const PageTemplate = ({ data }) => {
+  console.log(data)
   const {
     contentfulLandingPage: { internalName, hero, sections },
   } = data
@@ -21,6 +23,7 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={internalName} />    
       {!isEmpty(data) ? (
         <>
           {hero && <Hero hero={hero} internalName={internalName} />}

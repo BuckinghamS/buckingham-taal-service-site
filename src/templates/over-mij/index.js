@@ -9,13 +9,13 @@ const OverMij = (props) => {
   const {
     pageContext: {
       page,
-      page: { hero, sections },
+      page: { internalName, hero, sections },
     },
   } = props
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={internalName} />
       {props.pageContext.page ? (
         <>
           {hero && <Hero page={page} />}
