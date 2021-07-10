@@ -18,7 +18,7 @@ const MeHomepage = (props) => {
         <TextBlock>
           <h3 className="me-header">{content.title}</h3>
           <ReactMarkdown className="landingpage-p">{content.text.text}</ReactMarkdown>
-          <ButtonLink to={'/form'}>
+          <ButtonLink to={'/offerte'}>
             <span>{OFFERTE_FORMULIER}</span>
             <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
           </ButtonLink>

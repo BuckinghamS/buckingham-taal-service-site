@@ -8,7 +8,7 @@ import {
   TextContainer,
 } from '../../../styles/globalStyles'
 import ReactMarkdown from 'react-markdown'
-import { Button } from './../../Elements'
+import { ButtonLink } from './../../Elements'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 
 const OFFERTE_FORMULIER = 'Offerteformulier'
@@ -39,10 +39,10 @@ const LandingPageHero = (props) => {
             )}
             <TextContainer>
               {text && <ReactMarkdown className="landingpage-p">{text?.text}</ReactMarkdown>}
-              <Button to={'/form'}>
+              <ButtonLink to={'/offerte'}>
                 <span>{OFFERTE_FORMULIER}</span>
                 <span style={{ paddingLeft: `8px` }}>{<HiOutlineChevronRight />}</span>
-              </Button>
+              </ButtonLink>
             </TextContainer>
           </InnerContainer>
         </HeaderContainer>
