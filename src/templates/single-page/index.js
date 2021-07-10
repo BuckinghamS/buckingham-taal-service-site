@@ -10,7 +10,6 @@ import Uspgrid from '../../components/Homepage/UspGrid'
 import LatestBlog from '../../components/Blog/LatestBlog'
 
 const PageTemplate = ({ data }) => {
-  console.log(data)
   const {
     contentfulLandingPage: { internalName, hero, sections },
   } = data
