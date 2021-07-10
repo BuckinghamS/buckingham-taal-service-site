@@ -11,58 +11,58 @@ const BLOG_HEADER = 'Blog'
 const LEES_VERDER = 'Lees verder'
 
 const LatestBlog = () => {
-  const {
-    allContentfulBlogArticle: { edges },
-  } = useStaticQuery(graphql`
-    query LatestBlogQuery {
-      allContentfulBlogArticle(sort: { fields: createdAt, order: DESC }, limit: 1) {
-        edges {
-          node {
-            title
-            content {
-              ... on ContentfulComponentImage {
-                id
-                image {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData
-                    }
-                  }
-                }
-              }
-              ... on ContentfulComponentText {
-                id
-                title
-                text {
-                  text
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const {
+  //   allContentfulBlogArticle: { edges },
+  // } = useStaticQuery(graphql`
+  //   query LatestBlogQuery {
+  //     allContentfulBlogArticle(sort: { fields: createdAt, order: DESC }, limit: 1) {
+  //       edges {
+  //         node {
+  //           title
+  //           content {
+  //             ... on ContentfulComponentImage {
+  //               id
+  //               image {
+  //                 localFile {
+  //                   childImageSharp {
+  //                     gatsbyImageData
+  //                   }
+  //                 }
+  //               }
+  //             }
+  //             ... on ContentfulComponentText {
+  //               id
+  //               title
+  //               text {
+  //                 text
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const { content, title } = edges && edges[0].node
-  const {
-    text: { text },
-  } = content && content[0]
-  const {
-    image: {
-      localFile: {
-        childImageSharp: { gatsbyImageData },
-      },
-    },
-  } = content && content.filter((item) => item.image)[0]
+  // const { content, title } = edges && edges[0].node
+  // const {
+  //   text: { text },
+  // } = content && content[0]
+  // const {
+  //   image: {
+  //     localFile: {
+  //       childImageSharp: { gatsbyImageData },
+  //     },
+  //   },
+  // } = content && content.filter((item) => item.image)[0]
 
-  const maxIntroText = text && text.replace(/^(.{350}[^\s]*).*/, '$1') + '\n' + '...'
+  // const maxIntroText = text && text.replace(/^(.{350}[^\s]*).*/, '$1') + '\n' + '...'
 
-  const slug = title && `/blog/${slugCreator(title)}`
+  // const slug = title && `/blog/${slugCreator(title)}`
 
   return (
     <Wrapper>
-      <h2 className="block-header--orange">{BLOG_HEADER}</h2>
+      {/* <h2 className="block-header--orange">{BLOG_HEADER}</h2>
       <Inner>
         <BlogTextButton>
           <BlogText>
@@ -79,7 +79,7 @@ const LatestBlog = () => {
             <GatsbyImage image={gatsbyImageData} alt={title} className="image--no-constrained" />
           )}
         </BlogImage>
-      </Inner>
+      </Inner> */}
     </Wrapper>
   )
 }
