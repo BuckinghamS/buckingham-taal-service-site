@@ -31,6 +31,7 @@ export const ButtonLink = styled(Link)`
   max-width: max-content;
   text-decoration: none;
   color: white;
+  align-items: center;
   span {
     display: flex;
     align-items: center;
