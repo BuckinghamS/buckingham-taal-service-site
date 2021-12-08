@@ -20,7 +20,7 @@
     "gatsby-source-contentful": "^5.5.0",
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-transformer-sharp": "^3.14.0",
-    "html-react-parser": "^1.2.6",
+    "html-react-parser": "^1.4.2",
     "isomorphic-fetch": "^3.0.0",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
