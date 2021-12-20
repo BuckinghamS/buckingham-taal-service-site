@@ -6745,10 +6745,10 @@ html-entities@^2.1.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.1.1.tgz#faa5fc521e2d18499627835d22be3554c202208f"
   integrity sha512-HjNLgm9Ba8zKd6NDMkXa0mMPn3eDUxOUnEIm/qy2Rm6rnqRHgI9DpMYIv1Fndu8haUmfMQHNYNrlNKmdU8GMnQ==
 
-html-react-parser@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.2.tgz#3f310ec9e6022bc8a56282929582ccff3bf7080a"
-  integrity sha512-Q0aTOabDBm0jDf/rvge38Vh+dZhJ+8T5+Q6Z+gafQQDXt/7skbxCGr7ieol3xYU3ZYB/8F/LO5Pzcw1e85PKkw==
+html-react-parser@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.4.tgz#610f6c0b146fc88354118334dd0ea0a71292a083"
+  integrity sha512-7G44bVuoH2chiCDxOfyWMiFl5q9GWtMokbaL48dIC6KjWGEzjKh6oA36ziz8emaQFOhCJcXpFrvTHpuWdHpORg==
   dependencies:
     domhandler "4.3.0"
     html-dom-parser "1.0.4"
